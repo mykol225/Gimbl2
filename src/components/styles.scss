@@ -1,17 +1,83 @@
 $font-stack: Helvetica, sans-serif;
 $primary-color: #333;
+$white: #fff;
+
+$base: 8px;
+$xsmall: 16px;
+$small: 24px;
+$medium: 32px;
+$large: 40px;
+$xlarge: 48px;
+$xxlarge: 64px;
+$huge: 80px;
 
 body {
+  margin: 0;
+  padding: 0;
   font: 100% $font-stack;
   color: $primary-color;
 }
 
-.Value {
-  color: teal;
-  border: none;
-  background-image: none;
-  background-color: transparent;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
+.ValueSimple-container {
+  align-items: center;
+  height: $medium;
+}
+
+.ValueSimple-input {
+  margin: 8px;
+  border: 0;
+  -webkit-box-shadow: 0;
+  -moz-box-shadow: 0;
   box-shadow: none;
+  padding: 0;
+  width: 100%;
+  font-size: 11px;
+  line-height: 16px;
+  letter-spacing: 0.005em;
+  color: $primary-color;
+  background-color: transparent;
+  &::placeholder {
+    color: $primary-color;
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
+.Label-container {
+  display: flex;
+  align-items: center;
+  height: $medium;
+  background-color: salmon;
+}
+
+.Label-input {
+  margin: 8px;
+  border: 0;
+  -webkit-box-shadow: 0;
+  -moz-box-shadow: 0;
+  box-shadow: none;
+  padding: 0;
+  width: 100%;
+  background-color: #eee;
+  font-size: 11px;
+  line-height: 16px;
+  letter-spacing: 0.005em;
+  color: $primary-color;
+}
+
+.SimpleWIcon {
+  display: flex;
+  background-color: seashell;
+  border: thin solid seashell;
+  margin: -1px;
+  path {
+    fill: navy;
+  }
+  .ValueSimple-container {
+    margin-left: -$base;
+  }
+  &:focus-within {
+    border: thin solid black;
+  }
 }
