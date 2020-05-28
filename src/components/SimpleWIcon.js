@@ -1,17 +1,15 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import AngleIcon from '../images/assets/angle.svg'
+import Icon from '../components/Icon'
 import ValueSimple from './ValueSimple'
 
-const SimpleWIcon = () => {
+const SimpleWIcon = props => {
   return (
     <div className="SimpleWIcon">
-      <AngleIcon className="Icon" />
+      <Icon icon={props.icon} />
       <ValueSimple />
     </div>
   )
 }
 
 export default SimpleWIcon
-
-//how do I dynamically import the right svg?

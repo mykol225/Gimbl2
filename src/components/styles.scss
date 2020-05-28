@@ -1,6 +1,11 @@
 $font-stack: Helvetica, sans-serif;
-$primary-color: #333;
-$white: #fff;
+$white: rgba(255, 255, 255, 1);
+$white-8: rgba(255, 255, 255, 0.8);
+$white-4: rgba(255, 255, 255, 0.4);
+$black: rgba(0, 0, 0, 1);
+$black-8: rgba(0, 0, 0, 0.8);
+$black-3: rgba(0, 0, 0, 0.3);
+$accent-blue: #18a0fb;
 
 $base: 8px;
 $xsmall: 16px;
@@ -15,7 +20,7 @@ body {
   margin: 0;
   padding: 0;
   font: 100% $font-stack;
-  color: $primary-color;
+  color: $black;
 }
 
 .ValueSimple-container {
@@ -34,10 +39,10 @@ body {
   font-size: 11px;
   line-height: 16px;
   letter-spacing: 0.005em;
-  color: $primary-color;
+  color: $black;
   background-color: transparent;
   &::placeholder {
-    color: $primary-color;
+    color: $black;
   }
   &:focus {
     outline: none;
@@ -48,7 +53,7 @@ body {
   display: flex;
   align-items: center;
   height: $medium;
-  background-color: salmon;
+  // background-color: salmon;
 }
 
 .Label-input {
@@ -59,25 +64,25 @@ body {
   box-shadow: none;
   padding: 0;
   width: 100%;
-  background-color: #eee;
+  // background-color: #eee;
   font-size: 11px;
   line-height: 16px;
   letter-spacing: 0.005em;
-  color: $primary-color;
+  color: $black;
 }
 
 .SimpleWIcon {
   display: flex;
-  background-color: seashell;
-  border: thin solid seashell;
+  background-color: transparent;
+  border: 2px solid transparent;
   margin: -1px;
   path {
-    fill: navy;
+    fill: $black-3;
   }
   .ValueSimple-container {
     margin-left: -$base;
   }
   &:focus-within {
-    border: thin solid black;
+    border: 2px solid $accent-blue;
   }
 }
