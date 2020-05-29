@@ -7,7 +7,7 @@ const SimpleWIcon = props => {
   return (
     <div className="SimpleWIcon">
       <Icon icon={props.icon} />
-      <ValueSimple />
+      <ValueSimple placeholder={props.placeholder} />
     </div>
   )
 }

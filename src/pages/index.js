@@ -8,9 +8,9 @@ import ICONS from '../components/ICONS'
 
 const IndexPage = () => (
   <div>
-    <ValueSimple />
+    <ValueSimple placeholder="empty" />
     <Label labelName="test string" />
-    <SimpleWIcon icon={ICONS.LINKCONNECTED} />
+    <SimpleWIcon icon={ICONS.LINKCONNECTED} placeholder="empty" />
   </div>
 )
 

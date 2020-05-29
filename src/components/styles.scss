@@ -5,6 +5,7 @@ $white-4: rgba(255, 255, 255, 0.4);
 $black: rgba(0, 0, 0, 1);
 $black-8: rgba(0, 0, 0, 0.8);
 $black-3: rgba(0, 0, 0, 0.3);
+$black-1: rgba(0, 0, 0, 0.1);
 $accent-blue: #18a0fb;
 
 $base: 8px;
@@ -26,10 +27,19 @@ body {
 .ValueSimple-container {
   align-items: center;
   height: $medium;
+  border: 1px solid transparent; //this is to offset the hover border
+  &:hover {
+    border: 1px solid $black-1; //using border in order to round the edges (outline cannot do that)
+    border-radius: 2px;
+  }
+  &:focus-within {
+    margin: -1px;
+    border: 2px solid $accent-blue;
+  }
 }
 
 .ValueSimple-input {
-  margin: 8px;
+  margin: $base - 1px;
   border: 0;
   -webkit-box-shadow: 0;
   -moz-box-shadow: 0;
@@ -42,10 +52,15 @@ body {
   color: $black;
   background-color: transparent;
   &::placeholder {
-    color: $black;
+    color: $black-3;
+    border-bottom: 1px solid $black-1;
   }
   &:focus {
     outline: none;
+  }
+  &:hover::placeholder {
+    //how to I extend the hover? I want hover to activate at container size, but affect the bottom-border of .ValueSimple-input
+    border-bottom: none;
   }
 }
 
@@ -57,14 +72,13 @@ body {
 }
 
 .Label-input {
-  margin: 8px;
+  margin: $base;
   border: 0;
   -webkit-box-shadow: 0;
   -moz-box-shadow: 0;
   box-shadow: none;
   padding: 0;
   width: 100%;
-  // background-color: #eee;
   font-size: 11px;
   line-height: 16px;
   letter-spacing: 0.005em;
@@ -80,9 +94,21 @@ body {
     fill: $black-3;
   }
   .ValueSimple-container {
-    margin-left: -$base;
+    &:hover {
+      border: 1px solid transparent;
+    }
+    &:focus-within {
+      // margin-left: $base - 1px; //why the fuck does -9px work? -1px removes border width...
+      border: 2px solid transparent;
+    }
+  }
+  &:hover {
+    margin: 0px;
+    border: 1px solid $black-1; //using border in order to round the edges (outline cannot do that)
+    border-radius: 2px;
   }
   &:focus-within {
+    margin: -1px;
     border: 2px solid $accent-blue;
   }
 }
