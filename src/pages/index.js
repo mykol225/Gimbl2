@@ -12,6 +12,7 @@ const IndexPage = () => (
     <Label labelName="test string" />
     <SimpleWIcon icon={ICONS.LINKCONNECTED} placeholder="empty" />
   </div>
+  // if icon=null then it will remove the icon completely
 )
 
 export default IndexPage

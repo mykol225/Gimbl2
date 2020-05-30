@@ -8,6 +8,7 @@ $black-3: rgba(0, 0, 0, 0.3);
 $black-1: rgba(0, 0, 0, 0.1);
 $accent-blue: #18a0fb;
 
+$tiny: 4px;
 $base: 8px;
 $xsmall: 16px;
 $small: 24px;
@@ -16,6 +17,13 @@ $large: 40px;
 $xlarge: 48px;
 $xxlarge: 64px;
 $huge: 80px;
+
+$UI-11-font: $font-stack;
+$UI-11-style: normal;
+$UI-11-weight: normal;
+$UI-11-size: 11px;
+$UI-11-lh: 16px;
+$UI-11-ls: 0.005em;
 
 body {
   margin: 0;
@@ -36,6 +44,9 @@ body {
     margin: -1px;
     border: 2px solid $accent-blue;
   }
+  &:hover .ValueSimple-input::placeholder {
+    border-bottom: none;
+  }
 }
 
 .ValueSimple-input {
@@ -46,9 +57,11 @@ body {
   box-shadow: none;
   padding: 0;
   width: 100%;
-  font-size: 11px;
-  line-height: 16px;
-  letter-spacing: 0.005em;
+  font-size: $UI-11-size;
+  font-style: $UI-11-style;
+  font-weight: $UI-11-weight;
+  line-height: $xsmall;
+  letter-spacing: $UI-11-ls;
   color: $black;
   background-color: transparent;
   &::placeholder {
@@ -58,17 +71,12 @@ body {
   &:focus {
     outline: none;
   }
-  &:hover::placeholder {
-    //how to I extend the hover? I want hover to activate at container size, but affect the bottom-border of .ValueSimple-input
-    border-bottom: none;
-  }
 }
 
 .Label-container {
   display: flex;
   align-items: center;
   height: $medium;
-  // background-color: salmon;
 }
 
 .Label-input {
@@ -79,9 +87,9 @@ body {
   box-shadow: none;
   padding: 0;
   width: 100%;
-  font-size: 11px;
-  line-height: 16px;
-  letter-spacing: 0.005em;
+  font-size: $UI-11-size;
+  line-height: $UI-11-lh;
+  letter-spacing: $UI-11-ls;
   color: $black;
 }
 
@@ -110,5 +118,8 @@ body {
   &:focus-within {
     margin: -1px;
     border: 2px solid $accent-blue;
+  }
+  &:hover .ValueSimple-input::placeholder {
+    border-bottom: none;
   }
 }
