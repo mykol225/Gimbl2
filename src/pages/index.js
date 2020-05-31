@@ -1,18 +1,18 @@
 import React from 'react'
 import '../components/styles.scss'
-import ValueSimple from '../components/ValueSimple'
 import Label from '../components/label'
 import SimpleWIcon from '../components/SimpleWIcon'
-import Icon from '../components/Icon'
-import ICONS from '../components/ICONS'
+import ValueMultiple from '../components/ValueMultiple'
+import ICONS from '../components/ICONS' //passing this info down into SimpleIcon then Icon component to render the right icon path.
 
 const IndexPage = () => (
   <div>
-    <ValueSimple placeholder="empty" />
+    {/* <ValueSimple placeholder="empty" /> */}
     <Label labelName="test string" />
-    <SimpleWIcon icon={ICONS.LINKCONNECTED} placeholder="empty" />
+    <SimpleWIcon icon={ICONS.LINKCONNECTED} placeholder="empty" />{' '}
+    {/* if icon=null then it will remove the icon completely */}
+    <ValueMultiple icon={ICONS.CORNERRADIUS} />
   </div>
-  // if icon=null then it will remove the icon completely
 )
 
 export default IndexPage

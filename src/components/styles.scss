@@ -27,7 +27,7 @@ $UI-11-ls: 0.005em;
 
 body {
   margin: 0;
-  padding: 0;
+  padding: 8px;
   font: 100% $font-stack;
   color: $black;
 }
@@ -35,10 +35,11 @@ body {
 .ValueSimple-container {
   align-items: center;
   height: $medium;
-  border: 1px solid transparent; //this is to offset the hover border
+  // border: 1px solid transparent; //this is to offset the hover border
   &:hover {
-    border: 1px solid $black-1; //using border in order to round the edges (outline cannot do that)
+    // border: 1px solid $black-1; //using border in order to round the edges (outline cannot do that)
     border-radius: 2px;
+    box-shadow: inset 1px 0px 0px 0px;
   }
   &:focus-within {
     margin: -1px;
@@ -121,5 +122,45 @@ body {
   }
   &:hover .ValueSimple-input::placeholder {
     border-bottom: none;
+  }
+}
+
+.ValueMultiple {
+  display: flex;
+  background-color: transparent;
+  border: 2px solid transparent;
+  margin: -1px;
+  max-width: 160px;
+  path {
+    fill: $black-3;
+  }
+  .ValueSimple-container {
+    max-width: $medium;
+    &:hover {
+      border: 1px solid transparent;
+    }
+    &:focus-within {
+      border: 2px solid transparent;
+    }
+  }
+  .ValueSimple-input {
+    width: 20px;
+  }
+  &:hover {
+    margin: 1px 0px 0px 0px;
+    border: 1px solid $black-1; //using border in order to round the edges (outline cannot do that)
+    border-radius: 2px;
+    .ValueSimple-container {
+      border-left: 1px solid $black-1;
+      border-radius: 0px;
+    }
+  }
+  &:focus-within {
+    margin: -1px;
+    border: 2px solid $accent-blue;
+  }
+  #minus8px {
+    margin-left: -8px;
+    // background-color: lightsalmon;
   }
 }
