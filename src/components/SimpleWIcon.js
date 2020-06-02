@@ -5,18 +5,14 @@ const SimpleWIcon = props => {
   if (!props.icon) {
     return (
       <div className="SimpleWIcon">
-        <div className="ValueSimple-container">
-          <input type="text" className="ValueSimple-input" placeholder={props.placeholder} />
-        </div>
+        <input type="text" className="ValueSimple" placeholder="empty" />
       </div>
     )
   } else {
     return (
       <div className="SimpleWIcon">
         <Icon icon={props.icon} />
-        <div className="ValueSimple-container">
-          <input type="text" className="ValueSimple-input" placeholder={props.placeholder} />
-        </div>
+        <input type="text" className="ValueSimple" placeholder="empty" />
       </div>
     )
   }

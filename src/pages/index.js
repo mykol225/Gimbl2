@@ -8,9 +8,8 @@ import ICONS from '../components/ICONS' //passing this info down into SimpleIcon
 
 const IndexPage = () => (
   <div>
-    <input type="text" className="ValueSimple" placeholder="empty" />
-    <ValueSimple placeholder="empty" />
     <Label labelName="test string" />
+    <input type="text" className="ValueSimple" placeholder="empty" />{' '}
     <SimpleWIcon icon={ICONS.LINKCONNECTED} placeholder="empty" />{' '}
     {/* if icon=null then it will remove the icon completely */}
     <ValueMultiple icon={ICONS.CORNERRADIUS} />
@@ -18,7 +17,3 @@ const IndexPage = () => (
 )
 
 export default IndexPage
-
-//removed input from it's container and component.
-//this allowed me to style it correctly
-//now I have to put it in Value mulitple component and fix the css.
