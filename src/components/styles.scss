@@ -32,48 +32,6 @@ body {
   color: $black;
 }
 
-.ValueSimple-container {
-  align-items: center;
-  height: $medium;
-  // border: 1px solid transparent; //this is to offset the hover border
-  &:hover {
-    // border: 1px solid $black-1; //using border in order to round the edges (outline cannot do that)
-    border-radius: 2px;
-    box-shadow: inset 1px 0px 0px 0px;
-  }
-  &:focus-within {
-    margin: -1px;
-    border: 2px solid $accent-blue;
-  }
-  &:hover .ValueSimple-input::placeholder {
-    border-bottom: none;
-  }
-}
-
-.ValueSimple-input {
-  margin: $base - 1px;
-  border: 0;
-  -webkit-box-shadow: 0;
-  -moz-box-shadow: 0;
-  box-shadow: none;
-  padding: 0;
-  width: 100%;
-  font-size: $UI-11-size;
-  font-style: $UI-11-style;
-  font-weight: $UI-11-weight;
-  line-height: $xsmall;
-  letter-spacing: $UI-11-ls;
-  color: $black;
-  background-color: transparent;
-  &::placeholder {
-    color: $black-3;
-    border-bottom: 1px solid $black-1;
-  }
-  &:focus {
-    outline: none;
-  }
-}
-
 .Label-container {
   display: flex;
   align-items: center;
@@ -92,6 +50,85 @@ body {
   line-height: $UI-11-lh;
   letter-spacing: $UI-11-ls;
   color: $black;
+}
+
+.ValueSimple {
+  padding: 8px;
+  height: 16px;
+  width: 100%;
+  font-size: $UI-11-size;
+  font-style: $UI-11-style;
+  font-weight: $UI-11-weight;
+  line-height: $xsmall;
+  letter-spacing: $UI-11-ls;
+  color: $black;
+  background-color: transparent;
+  border: 0;
+  -webkit-box-shadow: 0;
+  -moz-box-shadow: 0;
+  box-shadow: none;
+  &:placeholder-shown {
+    box-shadow: inset 0px -3px 0px 0px white, inset 0px -4px 0px 0px $black-1;
+  }
+  &::placeholder {
+    color: $black-3;
+  }
+  &:hover {
+    box-shadow: 0px 0px 0px 1px $black-1;
+  }
+  &:focus {
+    outline: none;
+    box-shadow: 0px 0px 0px 2px $accent-blue;
+  }
+}
+
+.ValueSimple-container {
+  align-items: center;
+  height: $medium;
+  &:hover {
+    border-radius: 2px;
+    box-shadow: inset 0px 0px 0px 1px $black-1;
+  }
+  &:focus-within {
+    border-radius: 2px;
+    box-shadow: inset 0px 0px 0px 2px cyan;
+  }
+
+  // &:focus-within .ValueSimple-input::placeholder {
+  //   border-bottom: none;
+  // }
+  // &:hover .ValueSimple-input::placeholder {
+  //   border-bottom: none;
+  // }
+}
+
+//when .ValueSimple-input has a placeholder add an underline to the parent container
+
+.ValueSimple-input:placeholder-shown ~ .ValueSimple-container {
+  background-color: yellowgreen;
+}
+
+.ValueSimple-input {
+  margin: $base - 1px;
+  padding: 0;
+  width: 100%;
+  font-size: $UI-11-size;
+  font-style: $UI-11-style;
+  font-weight: $UI-11-weight;
+  line-height: $xsmall;
+  letter-spacing: $UI-11-ls;
+  color: $black;
+  background-color: transparent;
+  border: 0;
+  -webkit-box-shadow: 0;
+  -moz-box-shadow: 0;
+  box-shadow: none;
+  &::placeholder {
+    color: $black-3;
+  }
+  &:focus {
+    outline: none;
+  }
 }
 
 .SimpleWIcon {
