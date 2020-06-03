@@ -9,7 +9,7 @@ $black-1: rgba(0, 0, 0, 0.1);
 $accent-blue: #18a0fb;
 
 $tiny: 4px;
-$base: 8px;
+$base-8: 8px;
 $xsmall: 16px;
 $small: 24px;
 $medium: 32px;
@@ -39,7 +39,7 @@ body {
 }
 
 .Label-input {
-  margin: $base;
+  margin: $base-8;
   border: 0;
   -webkit-box-shadow: 0;
   -moz-box-shadow: 0;
@@ -53,8 +53,8 @@ body {
 }
 
 .ValueSimple {
-  padding: 8px;
-  height: 16px;
+  padding: $base-8;
+  height: $xsmall;
   width: 100%;
   font-size: $UI-11-size;
   font-style: $UI-11-style;
@@ -69,7 +69,8 @@ body {
   box-shadow: none;
   &:placeholder-shown {
     border-radius: 0px;
-    box-shadow: inset 0px -4px 0px 0px $white, inset 0px -5px 0px 0px $black-1;
+    box-shadow: inset 0px -2px 0px 0px $white, inset 8px 0px 0px 0px white,
+      inset -8px 0px 0px 0px white, inset 0px -3px 0px 0px $black-1;
   }
   &::placeholder {
     color: $black-3;
@@ -85,6 +86,10 @@ body {
   }
 }
 
+.Icon {
+  min-width: $medium;
+}
+
 .SimpleWIcon {
   display: flex;
   background-color: transparent;
@@ -95,8 +100,11 @@ body {
   &:hover {
     border-radius: 3px;
     box-shadow: inset 0px 0px 0px 1px $white, inset 0px 0px 0px 2px $black-1;
-    .ValueSimple:hover {
-      box-shadow: none;
+    .ValueSimple {
+      &:hover,
+      &:placeholder-shown {
+        box-shadow: none;
+      }
     }
   }
   &:focus-within {
@@ -111,40 +119,69 @@ body {
 
 .ValueMultiple {
   display: flex;
-  background-color: transparent;
-  border: 2px solid transparent;
-  margin: -1px;
-  max-width: 160px;
-  path {
-    fill: $black-3;
-  }
-  .ValueSimple-container {
-    max-width: $medium;
-    &:hover {
-      border: 1px solid transparent;
-    }
-    &:focus-within {
-      border: 2px solid transparent;
-    }
-  }
-  .ValueSimple-input {
-    width: 20px;
-  }
-  &:hover {
-    margin: 1px 0px 0px 0px;
-    border: 1px solid $black-1; //using border in order to round the edges (outline cannot do that)
-    border-radius: 2px;
-    .ValueSimple-container {
-      border-left: 1px solid $black-1;
-      border-radius: 0px;
-    }
+  // border: 2px solid transparent;
+  // margin: -1px;
+  max-width: 200px;
+  .SimpleWIcon:hover {
+    box-shadow: inset 0px 0px 0px 0px $white, inset 0px 0px 0px 0px $black-1;
   }
   &:focus-within {
-    margin: -1px;
-    border: 2px solid $accent-blue;
+    background-color: lightyellow;
+    border-radius: 4px;
+    box-shadow: inset 0px 0px 0px 1px $white, inset 0px 0px 0px 3px $accent-blue;
+    // .ValueSimple {
+    //   &:hover,
+    //   &:placeholder-shown {
+    //     box-shadow: none;
+    //   }
+    // }
   }
-  #minus8px {
-    margin-left: -8px;
-    // background-color: lightsalmon;
+  &:hover {
+    border-radius: 3px;
+    box-shadow: inset 0px 0px 0px 1px $white, inset 0px 0px 0px 2px $black-1;
+    .ValueSimple {
+      &:hover,
+      &:placeholder-shown {
+        box-shadow: none;
+      }
+    }
   }
+
+  .ValueSimple:placeholder-shown {
+    box-shadow: none;
+  }
+
+  // .ValueSimple:first-child {
+  //   // margin-left: -8px;
+  //   background-color: lightsalmon;
+  // }
+
+  // path {
+  //   fill: $black-3;
+  // }
+  // .ValueSimple-container {
+  //   max-width: $medium;
+  //   &:hover {
+  //     border: 1px solid transparent;
+  //   }
+  //   &:focus-within {
+  //     border: 2px solid transparent;
+  //   }
+  // }
+  // .ValueSimple-input {
+  //   width: 20px;
+  // }
+  // &:hover {
+  //   margin: 1px 0px 0px 0px;
+  //   border: 1px solid $black-1; //using border in order to round the edges (outline cannot do that)
+  //   border-radius: 2px;
+  //   .ValueSimple-container {
+  //     border-left: 1px solid $black-1;
+  //     border-radius: 0px;
+  //   }
+  // }
+  // &:focus-within {
+  //   margin: -1px;
+  //   border: 2px solid $accent-blue;
+  // }
 }
