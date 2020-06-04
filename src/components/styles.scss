@@ -30,6 +30,34 @@ body {
   padding: 8px;
   font: 100% $font-stack;
   color: $black;
+  cursor: default;
+}
+
+.IconEwCursor {
+  min-width: $medium;
+  &:hover,
+  &:focus {
+    cursor: ew-resize;
+  }
+}
+
+.Icon {
+  min-width: $medium;
+}
+
+.SectionTitle-container {
+  height: $medium;
+}
+
+.SectionTitle-text {
+  margin: $base-8;
+  padding: 0;
+  width: 100%;
+  font-size: $UI-11-size;
+  line-height: $UI-11-lh;
+  letter-spacing: $UI-11-ls;
+  font-weight: 600;
+  color: $black;
 }
 
 .Label-container {
@@ -40,10 +68,6 @@ body {
 
 .Label-input {
   margin: $base-8;
-  border: 0;
-  -webkit-box-shadow: 0;
-  -moz-box-shadow: 0;
-  box-shadow: none;
   padding: 0;
   width: 100%;
   font-size: $UI-11-size;
@@ -53,6 +77,7 @@ body {
 }
 
 .ValueSimple {
+  cursor: default;
   padding: $base-8;
   height: $xsmall;
   width: 100%;
@@ -86,15 +111,18 @@ body {
   }
 }
 
-.Icon {
-  min-width: $medium;
-}
-
 .SimpleWIcon {
   display: flex;
-  background-color: transparent;
+  background-color: lightcyan;
   path {
     fill: $black-3;
+  }
+  &:first-child {
+    background-color: dodgerblue;
+  }
+  &:nth-child(2) {
+    color: magenta;
+    background-color: lightgreen;
   }
 
   &:hover {
@@ -107,6 +135,7 @@ body {
       }
     }
   }
+
   &:focus-within {
     outline: none;
     border-radius: 4px;
@@ -119,16 +148,17 @@ body {
 
 .ValueMultiple {
   display: flex;
-  max-width: 200px;
+  max-width: 900px;
   .SimpleWIcon:hover {
     box-shadow: inset 0px 0px 0px 0px $white, inset 0px 0px 0px 0px $black-1;
   }
+
   &:hover {
     border-radius: 3px;
     box-shadow: inset 0px 0px 0px 1px $white, inset 0px 0px 0px 2px $black-1;
   }
+
   &:focus-within {
-    background-color: lightyellow;
     border-radius: 4px;
     box-shadow: inset 0px 0px 0px 1px $white, inset 0px 0px 0px 3px $accent-blue;
     .SimpleWIcon {
@@ -139,45 +169,7 @@ body {
   .ValueSimple:placeholder-shown {
     box-shadow: none;
   }
-
-  // .ValueSimple {
-  //   &:hover,
-  //   &:placeholder-shown {
-  //     box-shadow: none;
-  //   }
-  // }
-
-  // .ValueSimple:first-child {
-  //   // margin-left: -8px;
-  //   background-color: lightsalmon;
-  // }
-
-  // path {
-  //   fill: $black-3;
-  // }
-  // .ValueSimple-container {
-  //   max-width: $medium;
-  //   &:hover {
-  //     border: 1px solid transparent;
-  //   }
-  //   &:focus-within {
-  //     border: 2px solid transparent;
-  //   }
-  // }
-  // .ValueSimple-input {
-  //   width: 20px;
-  // }
-  // &:hover {
-  //   margin: 1px 0px 0px 0px;
-  //   border: 1px solid $black-1; //using border in order to round the edges (outline cannot do that)
-  //   border-radius: 2px;
-  //   .ValueSimple-container {
-  //     border-left: 1px solid $black-1;
-  //     border-radius: 0px;
-  //   }
-  // }
-  // &:focus-within {
-  //   margin: -1px;
-  //   border: 2px solid $accent-blue;
+  // .SimpleWIcon {
+  //   flex-basis: 32px;
   // }
 }
