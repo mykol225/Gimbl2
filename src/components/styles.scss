@@ -119,37 +119,33 @@ body {
 
 .ValueMultiple {
   display: flex;
-  // border: 2px solid transparent;
-  // margin: -1px;
   max-width: 200px;
   .SimpleWIcon:hover {
     box-shadow: inset 0px 0px 0px 0px $white, inset 0px 0px 0px 0px $black-1;
+  }
+  &:hover {
+    border-radius: 3px;
+    box-shadow: inset 0px 0px 0px 1px $white, inset 0px 0px 0px 2px $black-1;
   }
   &:focus-within {
     background-color: lightyellow;
     border-radius: 4px;
     box-shadow: inset 0px 0px 0px 1px $white, inset 0px 0px 0px 3px $accent-blue;
-    // .ValueSimple {
-    //   &:hover,
-    //   &:placeholder-shown {
-    //     box-shadow: none;
-    //   }
-    // }
-  }
-  &:hover {
-    border-radius: 3px;
-    box-shadow: inset 0px 0px 0px 1px $white, inset 0px 0px 0px 2px $black-1;
-    .ValueSimple {
-      &:hover,
-      &:placeholder-shown {
-        box-shadow: none;
-      }
+    .SimpleWIcon {
+      box-shadow: none;
     }
   }
 
   .ValueSimple:placeholder-shown {
     box-shadow: none;
   }
+
+  // .ValueSimple {
+  //   &:hover,
+  //   &:placeholder-shown {
+  //     box-shadow: none;
+  //   }
+  // }
 
   // .ValueSimple:first-child {
   //   // margin-left: -8px;

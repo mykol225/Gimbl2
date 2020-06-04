@@ -30,6 +30,3 @@ const ValueMultiple = props => {
 }
 
 export default ValueMultiple
-
-//ValueMultiple: focus only shows NOT on hover
-// trying to figure out why focus only shows when not on hover
