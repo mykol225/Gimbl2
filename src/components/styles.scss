@@ -1,4 +1,4 @@
-$font-stack: Helvetica, sans-serif;
+$font-stack: 'Inter', Helvetica, sans-serif;
 $white: rgba(255, 255, 255, 1);
 $white-8: rgba(255, 255, 255, 0.8);
 $white-4: rgba(255, 255, 255, 0.4);
@@ -20,7 +20,9 @@ $huge: 80px;
 
 $UI-11-font: $font-stack;
 $UI-11-style: normal;
-$UI-11-weight: normal;
+$UI-11-wgt-normal: 400;
+$UI-11-wgt-medium: 500;
+$UI-11-wgt-bold: 600;
 $UI-11-size: 11px;
 $UI-11-lh: 16px;
 $UI-11-ls: 0.005em;
@@ -31,18 +33,6 @@ body {
   font: 100% $font-stack;
   color: $black;
   cursor: default;
-}
-
-.IconEwCursor {
-  min-width: $medium;
-  &:hover,
-  &:focus {
-    cursor: ew-resize;
-  }
-}
-
-.Icon {
-  min-width: $medium;
 }
 
 .SectionTitle-container {
@@ -56,7 +46,7 @@ body {
   font-size: $UI-11-size;
   line-height: $UI-11-lh;
   letter-spacing: $UI-11-ls;
-  font-weight: 600;
+  font-weight: $UI-11-wgt-bold;
   color: $black;
 }
 
@@ -78,12 +68,12 @@ body {
 
 .ValueSimple {
   cursor: default;
-  padding: $base-8;
+  padding: $base-8 $tiny $base-8 $base-8;
   height: $xsmall;
   width: 100%;
   font-size: $UI-11-size;
   font-style: $UI-11-style;
-  font-weight: $UI-11-weight;
+  font-weight: $UI-11-wgt-normal;
   line-height: $xsmall;
   letter-spacing: $UI-11-ls;
   color: $black;
@@ -113,16 +103,17 @@ body {
 
 .SimpleWIcon {
   display: flex;
-  background-color: lightcyan;
   path {
     fill: $black-3;
   }
-  &:first-child {
-    background-color: dodgerblue;
-  }
-  &:nth-child(2) {
-    color: magenta;
-    background-color: lightgreen;
+
+  .Icon {
+    min-width: $medium;
+    margin-right: -$base-8;
+    &:hover,
+    &:focus {
+      cursor: ew-resize;
+    }
   }
 
   &:hover {
@@ -148,9 +139,12 @@ body {
 
 .ValueMultiple {
   display: flex;
-  max-width: 900px;
+  max-width: 152px;
   .SimpleWIcon:hover {
     box-shadow: inset 0px 0px 0px 0px $white, inset 0px 0px 0px 0px $black-1;
+  }
+  .SimpleWIcon:nth-child(1) {
+    min-width: $medium + $medium - $base-8;
   }
 
   &:hover {
@@ -169,7 +163,4 @@ body {
   .ValueSimple:placeholder-shown {
     box-shadow: none;
   }
-  // .SimpleWIcon {
-  //   flex-basis: 32px;
-  // }
 }

@@ -1,4 +1,5 @@
 import React from 'react'
+import 'typeface-inter'
 import '../components/styles.scss'
 import Label from '../components/label'
 import SimpleWIcon from '../components/SimpleWIcon'

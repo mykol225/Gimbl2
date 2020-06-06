@@ -3,7 +3,7 @@ import React from 'react'
 const Icon = props => (
   <svg
     className="Icon"
-    className={props.cursor}
+    // className={props.cursor}
     width="32"
     height="32"
     viewBox="0 0 32 32"

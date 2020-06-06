@@ -20,8 +20,5 @@ const SimpleWIcon = props => {
 
 export default SimpleWIcon
 
-//trying to get correct size and spacing for ValueMultiple
-
-//trying to target the first value (or second child)
-// but realized I cannot seem to target the icon
-// and that targeting isn't working for SimpleWIcon
+//struggling with the spacing of the first
+//input of .ValueMultiple
