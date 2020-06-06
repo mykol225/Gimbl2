@@ -1,5 +1,5 @@
 import React from 'react'
-import Icon from '../components/Icon'
+import Icon32 from '../components/Icon32'
 
 const SimpleWIcon = props => {
   if (!props.icon || props.icon === 'none') {
@@ -11,7 +11,7 @@ const SimpleWIcon = props => {
   } else {
     return (
       <div className="SimpleWIcon">
-        <Icon icon={props.icon} cursor={props.cursor} />
+        <Icon32 icon={props.icon} cursor={props.cursor} />
         <input type="text" className="ValueSimple" placeholder={props.placeholder} />
       </div>
     )
@@ -19,6 +19,3 @@ const SimpleWIcon = props => {
 }
 
 export default SimpleWIcon
-
-//struggling with the spacing of the first
-//input of .ValueMultiple
