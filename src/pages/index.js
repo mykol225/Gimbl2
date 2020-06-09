@@ -8,6 +8,9 @@ import LargeSectionTitle from '../components/LargeSectionTitle'
 import SectionTitle from '../components/SectionTItle'
 import Disclosure from '../components/Disclosure'
 import DisclosureSection from '../components/DisclosureSection'
+import Combobox from '../components/Combobox'
+import OptionMenu from '../components/OptionMenu'
+import OptionMenuCustom from '../components/OptionMenuCustom'
 import ICONS from '../components/ICONS' //passing this info down into SimpleIcon then Icon component to render the right icon path.
 
 const IndexPage = () => (
@@ -21,6 +24,13 @@ const IndexPage = () => (
     <SimpleWIcon icon={ICONS.ANGLE} cursor="IconEwCursor" placeholder="empty" />{' '}
     {/* if icon=null then it will remove the icon completely */}
     <ValueMultiple icon={ICONS.CORNERRADIUS} />
+    <Combobox />
+    <OptionMenu />
+    <OptionMenuCustom
+      icon={ICONS.BLENDEMPTY}
+      arrow={ICONS.CHEVRONDOWN8}
+      selecticon={ICONS.MENUCHECKMARKON}
+    />
   </div>
 )
 

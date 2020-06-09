@@ -1,12 +1,12 @@
 import React from 'react'
 
-const Icon16 = props => (
+const Icon8 = props => (
   <svg
-    className="Icon16"
+    className="Icon8"
     // className={props.cursor}
-    width="16"
-    height="16"
-    viewBox="0 0 16 16"
+    width="8"
+    height="8"
+    viewBox="0 0 8 8"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
@@ -14,4 +14,4 @@ const Icon16 = props => (
   </svg>
 )
 
-export default Icon16
+export default Icon8

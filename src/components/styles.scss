@@ -27,6 +27,15 @@ $UI-11-size: 11px;
 $UI-11-lh: 16px;
 $UI-11-ls: 0.005em;
 
+$UI-12-font: $font-stack;
+$UI-12-style: normal;
+$UI-12-wgt-normal: 400;
+$UI-12-wgt-medium: 500;
+$UI-12-wgt-bold: 600;
+$UI-12-size: 12px;
+$UI-12-lh: 24px;
+$UI-12-ls: -0.006em;
+
 $UI-14-font: $font-stack;
 $UI-14-style: normal;
 $UI-14-wgt-normal: 400;
@@ -212,5 +221,142 @@ body {
 
   .ValueSimple:placeholder-shown {
     box-shadow: none;
+  }
+}
+
+.Combobox {
+  cursor: default;
+  padding: $base-8 $tiny $base-8 $base-8;
+  height: $xsmall;
+  width: 100%;
+  font-size: $UI-11-size;
+  font-style: $UI-11-style;
+  font-weight: $UI-11-wgt-normal;
+  line-height: $xsmall;
+  letter-spacing: $UI-11-ls;
+  color: $black;
+  background-color: transparent;
+  border: 0;
+  -webkit-box-shadow: 0;
+  -moz-box-shadow: 0;
+  box-shadow: none;
+
+  &::placeholder {
+    color: $black;
+  }
+  &:hover {
+    border-radius: 3px;
+    box-shadow: inset 0px 0px 0px 1px $white, inset 0px 0px 0px 2px $black-1;
+  }
+  &:focus {
+    outline: none;
+    border-radius: 4px;
+    box-shadow: inset 0px 0px 0px 1px $white, inset 0px 0px 0px 3px $accent-blue;
+  }
+}
+
+.OptionMenu-wrapper {
+  position: relative;
+  user-select: none;
+  width: 100%;
+}
+
+.OptionMenu {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.OptionMenu-trigger {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: $base-8 $tiny $base-8 0;
+  height: $xsmall;
+  width: 100%;
+  font-size: $UI-11-size;
+  font-style: $UI-11-style;
+  font-weight: $UI-11-wgt-normal;
+  line-height: $xsmall;
+  letter-spacing: $UI-11-ls;
+  color: $black;
+  background-color: transparent;
+  cursor: default;
+  .Icon32 {
+    path {
+      fill: $black-8;
+    }
+  }
+  .Icon8 {
+    position: relative;
+    margin-left: $tiny;
+    path {
+      fill: $black-3;
+    }
+  }
+  &:hover {
+    border-radius: 3px;
+    box-shadow: inset 0px 0px 0px 1px $white, inset 0px 0px 0px 2px $black-1;
+    .Icon8 {
+      position: absolute;
+      right: $base-8;
+      path {
+        fill: $black-8;
+      }
+    }
+  }
+}
+
+.OptionMenu-options {
+  position: absolute;
+  display: block;
+  padding: 8px 0px;
+  top: 100%;
+  left: 0;
+  right: 0;
+  color: #fff;
+  font-family: $UI-12-font;
+  font-style: $UI-12-style;
+  font-weight: $UI-12-wgt-normal;
+  font-size: $UI-12-size;
+  line-height: $UI-12-lh;
+  letter-spacing: $UI-12-ls;
+  background: #222;
+  border-radius: 2px;
+  transition: all 0.5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 2;
+}
+
+.OptionMenu.open .OptionMenu-options {
+  opacity: 1;
+  visibility: visible;
+}
+
+.OptionMenu-option {
+  position: relative;
+  display: flex;
+  padding-left: $medium;
+  height: $medium;
+  font-family: $UI-12-font;
+  font-style: $UI-12-style;
+  font-weight: 300;
+  line-height: 32px;
+  letter-spacing: $UI-12-ls;
+  color: #fff;
+  // cursor: default;
+  // transition: all 0.2s;
+
+  &:hover {
+    background-color: $accent-blue;
+  }
+  &.selected {
+    color: $white;
+    padding-left: 0;
+    path {
+      fill: $white-8;
+      align-self: center;
+    }
   }
 }
