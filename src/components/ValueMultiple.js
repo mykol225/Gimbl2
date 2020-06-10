@@ -6,10 +6,15 @@ import ICONS from '../components/ICONS' //passing this info down into SimpleIcon
 const ValueMultiple = props => {
   return (
     <div className="ValueMultiple">
-      <SimpleWIcon icon={ICONS.CORNERRADIUS} cursor={props.cursor} placeholder="1234" />
-      <SimpleWIcon placeholder="1234" />
-      <SimpleWIcon placeholder="1234" />
-      <SimpleWIcon placeholder="1234" />
+      <SimpleWIcon
+        icon={ICONS.CORNERRADIUS}
+        cursor={props.cursor}
+        value={props.value}
+        placeholder={props.placeholder}
+      />
+      <SimpleWIcon value={props.value} placeholder={props.placeholder} />
+      <SimpleWIcon value={props.value} placeholder={props.placeholder} />
+      <SimpleWIcon value={props.value} placeholder={props.placeholder} />
     </div>
   )
 }

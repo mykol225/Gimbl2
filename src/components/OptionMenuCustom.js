@@ -3,12 +3,12 @@ import Icon32 from '../components/Icon32'
 import Icon8 from '../components/Icon8'
 
 const OptionMenuCustom = props => {
-  let options = 'OptionMenu'
+  const open = <div className="OptionMenu-options"></div>
+  const closed = <div className="OptionMenu-options open"></div>
+  let menu = document.querySelector('OptionMenu-options')
   const showOptions = () => {
-    options = 'OptionMenuOpen'
-    console.log(options)
+    console.log(menu)
   }
-  console.log(options)
 
   return (
     <div className="OptionMenu-wrapper">

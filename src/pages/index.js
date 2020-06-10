@@ -8,6 +8,7 @@ import LargeSectionTitle from '../components/LargeSectionTitle'
 import SectionTitle from '../components/SectionTItle'
 import Disclosure from '../components/Disclosure'
 import DisclosureSection from '../components/DisclosureSection'
+import ValueSimple from '../components/ValueSimple'
 import Combobox from '../components/Combobox'
 import OptionMenu from '../components/OptionMenu'
 import OptionMenuCustom from '../components/OptionMenuCustom'
@@ -20,10 +21,9 @@ const IndexPage = () => (
     <DisclosureSection name="Disclosure Section" icon={ICONS.CARETRIGHT16} />
     <Label labelName="Lable name" />
     <Disclosure name="Disclosure" icon={ICONS.CARETRIGHT16} />
-    <input type="text" className="ValueSimple" placeholder="empty" />{' '}
-    <SimpleWIcon icon={ICONS.ANGLE} cursor="IconEwCursor" placeholder="empty" />{' '}
-    {/* if icon=null then it will remove the icon completely */}
-    <ValueMultiple icon={ICONS.CORNERRADIUS} />
+    <ValueSimple value="" placeholder="placeholder" />
+    <SimpleWIcon icon={ICONS.ANGLE} cursor="IconEwCursor" value="" placeholder="empty" />{' '}
+    <ValueMultiple icon={ICONS.CORNERRADIUS} value="" placeholder="0" />
     <Combobox />
     <OptionMenu />
     <OptionMenuCustom

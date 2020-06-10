@@ -209,6 +209,11 @@ body {
   &:hover {
     border-radius: 3px;
     box-shadow: inset 0px 0px 0px 1px $white, inset 0px 0px 0px 2px $black-1;
+    .SimpleWIcon:nth-child(n + 2) {
+      box-shadow: inset 0px 1px 0px 0px $white, inset 0px -1px 0px 0px $white,
+        inset 1px 0px 0px 0px $black-1;
+      border-radius: 0;
+    }
   }
 
   &:focus-within {
@@ -218,7 +223,6 @@ body {
       box-shadow: none;
     }
   }
-
   .ValueSimple:placeholder-shown {
     box-shadow: none;
   }
@@ -329,7 +333,7 @@ body {
   z-index: 2;
 }
 
-.OptionMenu.open .OptionMenu-options {
+.OptionMenu-options.open {
   opacity: 1;
   visibility: visible;
 }
