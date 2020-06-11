@@ -3,12 +3,6 @@ import ValueSimple from '../components/ValueSimple'
 import Icon32 from '../components/Icon32'
 
 const SimpleWIcon = props => {
-  const [value, setValue] = useState(props.value)
-
-  function handleNameChange(event) {
-    setValue(event.target.value)
-  }
-
   if (!props.icon) {
     return (
       <div className="SimpleWIcon">

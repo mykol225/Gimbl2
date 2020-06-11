@@ -6,6 +6,8 @@ $black: rgba(0, 0, 0, 1);
 $black-8: rgba(0, 0, 0, 0.8);
 $black-3: rgba(0, 0, 0, 0.3);
 $black-1: rgba(0, 0, 0, 0.1);
+$hud: #222;
+$toolbar: #2c2c2c;
 $accent-blue: #18a0fb;
 
 $tiny: 4px;
@@ -143,8 +145,8 @@ body {
   box-shadow: none;
   &:placeholder-shown {
     border-radius: 0px;
-    box-shadow: inset 0px -2px 0px 0px $white, inset 8px 0px 0px 0px white,
-      inset -8px 0px 0px 0px white, inset 0px -3px 0px 0px $black-1;
+    box-shadow: inset 0px -2px 0px 0px $white, inset 8px 0px 0px 0px $white,
+      inset -8px 0px 0px 0px $white, inset 0px -3px 0px 0px $black-1;
   }
   &::placeholder {
     color: $black-3;
@@ -293,7 +295,7 @@ body {
   }
   .Icon8 {
     position: relative;
-    margin-left: $tiny;
+    margin-left: 6px;
     path {
       fill: $black-3;
     }
@@ -318,39 +320,32 @@ body {
   top: 100%;
   left: 0;
   right: 0;
-  color: #fff;
+  color: $white;
   font-family: $UI-12-font;
   font-style: $UI-12-style;
   font-weight: $UI-12-wgt-normal;
   font-size: $UI-12-size;
   line-height: $UI-12-lh;
   letter-spacing: $UI-12-ls;
-  background: #222;
+  background: $hud;
   border-radius: 2px;
-  transition: all 0.5s;
+  transition: all 0.1s;
   opacity: 0;
   visibility: hidden;
   z-index: 2;
 }
 
-.OptionMenu-options.open {
-  opacity: 1;
-  visibility: visible;
-}
-
 .OptionMenu-option {
   position: relative;
   display: flex;
-  padding-left: $medium;
+  padding-left: 0;
   height: $medium;
   font-family: $UI-12-font;
   font-style: $UI-12-style;
   font-weight: 300;
   line-height: 32px;
   letter-spacing: $UI-12-ls;
-  color: #fff;
-  // cursor: default;
-  // transition: all 0.2s;
+  color: $white;
 
   &:hover {
     background-color: $accent-blue;
