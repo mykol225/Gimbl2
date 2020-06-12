@@ -1,15 +1,28 @@
-$font-stack: 'Inter', Helvetica, sans-serif;
-$white: rgba(255, 255, 255, 1);
-$white-8: rgba(255, 255, 255, 0.8);
-$white-4: rgba(255, 255, 255, 0.4);
-$black: rgba(0, 0, 0, 1);
-$black-8: rgba(0, 0, 0, 0.8);
-$black-3: rgba(0, 0, 0, 0.3);
-$black-1: rgba(0, 0, 0, 0.1);
+/******** COLOR ********/
+//Background color styles
+$white: #ffffff;
+$white-8: #ffffffcc;
+$white-4: #ffffff66;
 $hud: #222;
 $toolbar: #2c2c2c;
-$accent-blue: #18a0fb;
 
+//Foreground color styles
+$fg-high-priority: #000;
+$fg-normal: #000000cc;
+$fg-low-priority: #0000001a;
+$flip-fg-high-priority: #ffffff;
+$flip-fg-normal: #ffffffcc;
+$flip-fg-low-priority: #ffffff66;
+
+//Accent & indicator color styles
+$primary-accent: #18a0fb;
+$secondary-accent: #7b61ff;
+$tertiary-accent: #ff00ff;
+$success: #1bc47d;
+$warning: #f24822;
+$error: #ffeb00;
+
+/******** SPACING ********/
 $tiny: 4px;
 $base-8: 8px;
 $xsmall: 16px;
@@ -20,6 +33,11 @@ $xlarge: 48px;
 $xxlarge: 64px;
 $huge: 80px;
 
+/******** FONTS ********/
+// Family
+$font-stack: 'Inter', Helvetica, sans-serif;
+
+// 11 pt
 $UI-11-font: $font-stack;
 $UI-11-style: normal;
 $UI-11-wgt-normal: 400;
@@ -29,6 +47,7 @@ $UI-11-size: 11px;
 $UI-11-lh: 16px;
 $UI-11-ls: 0.005em;
 
+// 12 pt
 $UI-12-font: $font-stack;
 $UI-12-style: normal;
 $UI-12-wgt-normal: 400;
@@ -38,6 +57,7 @@ $UI-12-size: 12px;
 $UI-12-lh: 24px;
 $UI-12-ls: -0.006em;
 
+// 14 pt
 $UI-14-font: $font-stack;
 $UI-14-style: normal;
 $UI-14-wgt-normal: 400;
@@ -47,6 +67,11 @@ $UI-14-size: 14px;
 $UI-14-lh: 24px;
 $UI-14-ls: -0.006em;
 
+/******** EFFECTS ********/
+$hud-shadow: drop-shadow(0px 5px 17px rgba(0, 0, 0, 0.2))
+  drop-shadow(0px 2px 7px rgba(0, 0, 0, 0.15));
+
+/******** MAIN CSS *******/
 * {
   margin: 0;
   padding: 0;
@@ -55,7 +80,7 @@ body {
   margin: 0;
   padding: 8px;
   font: 100% $font-stack;
-  color: $black;
+  color: $fg-high-priority;
   cursor: default;
 }
 
@@ -70,7 +95,7 @@ body {
   line-height: $UI-14-lh;
   letter-spacing: $UI-14-ls;
   font-weight: $UI-14-wgt-normal;
-  color: $black;
+  color: $fg-high-priority;
 }
 
 .SectionTitle-container {
@@ -84,7 +109,7 @@ body {
   line-height: $UI-11-lh;
   letter-spacing: $UI-11-ls;
   font-weight: $UI-11-wgt-bold;
-  color: $black;
+  color: $fg-high-priority;
 }
 
 .Disclosure-container {
@@ -99,7 +124,7 @@ body {
   font-size: $UI-11-size;
   line-height: $UI-11-lh;
   letter-spacing: $UI-11-ls;
-  color: $black;
+  color: $fg-high-priority;
 }
 
 .DisclosureSection-p {
@@ -109,7 +134,7 @@ body {
   line-height: $UI-11-lh;
   letter-spacing: $UI-11-ls;
   font-weight: $UI-11-wgt-bold;
-  color: $black;
+  color: $fg-high-priority;
 }
 
 .Label-container {
@@ -124,7 +149,7 @@ body {
   font-size: $UI-11-size;
   line-height: $UI-11-lh;
   letter-spacing: $UI-11-ls;
-  color: $black;
+  color: $fg-high-priority;
 }
 
 .ValueSimple {
@@ -137,7 +162,7 @@ body {
   font-weight: $UI-11-wgt-normal;
   line-height: $xsmall;
   letter-spacing: $UI-11-ls;
-  color: $black;
+  color: $fg-high-priority;
   background-color: transparent;
   border: 0;
   -webkit-box-shadow: 0;
@@ -146,26 +171,26 @@ body {
   &:placeholder-shown {
     border-radius: 0px;
     box-shadow: inset 0px -2px 0px 0px $white, inset 8px 0px 0px 0px $white,
-      inset -8px 0px 0px 0px $white, inset 0px -3px 0px 0px $black-1;
+      inset -8px 0px 0px 0px $white, inset 0px -3px 0px 0px $fg-low-priority;
   }
   &::placeholder {
-    color: $black-3;
+    color: $fg-normal;
   }
   &:hover {
     border-radius: 3px;
-    box-shadow: inset 0px 0px 0px 1px $white, inset 0px 0px 0px 2px $black-1;
+    box-shadow: inset 0px 0px 0px 1px $white, inset 0px 0px 0px 2px $fg-low-priority;
   }
   &:focus {
     outline: none;
     border-radius: 4px;
-    box-shadow: inset 0px 0px 0px 1px $white, inset 0px 0px 0px 3px $accent-blue;
+    box-shadow: inset 0px 0px 0px 1px $white, inset 0px 0px 0px 3px $primary-accent;
   }
 }
 
 .SimpleWIcon {
   display: flex;
   path {
-    fill: $black-3;
+    fill: $fg-normal;
   }
 
   .Icon32 {
@@ -179,7 +204,7 @@ body {
 
   &:hover {
     border-radius: 3px;
-    box-shadow: inset 0px 0px 0px 1px $white, inset 0px 0px 0px 2px $black-1;
+    box-shadow: inset 0px 0px 0px 1px $white, inset 0px 0px 0px 2px $fg-low-priority;
     .ValueSimple {
       &:hover,
       &:placeholder-shown {
@@ -191,7 +216,7 @@ body {
   &:focus-within {
     outline: none;
     border-radius: 4px;
-    box-shadow: inset 0px 0px 0px 1px $white, inset 0px 0px 0px 3px $accent-blue;
+    box-shadow: inset 0px 0px 0px 1px $white, inset 0px 0px 0px 3px $primary-accent;
     .ValueSimple:focus {
       box-shadow: none;
     }
@@ -202,7 +227,7 @@ body {
   display: flex;
   max-width: 152px;
   .SimpleWIcon:hover {
-    box-shadow: inset 0px 0px 0px 0px $white, inset 0px 0px 0px 0px $black-1;
+    box-shadow: inset 0px 0px 0px 0px $white, inset 0px 0px 0px 0px $fg-low-priority;
   }
   .SimpleWIcon:nth-child(1) {
     min-width: $medium + $medium - $base-8;
@@ -210,17 +235,17 @@ body {
 
   &:hover {
     border-radius: 3px;
-    box-shadow: inset 0px 0px 0px 1px $white, inset 0px 0px 0px 2px $black-1;
+    box-shadow: inset 0px 0px 0px 1px $white, inset 0px 0px 0px 2px $fg-low-priority;
     .SimpleWIcon:nth-child(n + 2) {
       box-shadow: inset 0px 1px 0px 0px $white, inset 0px -1px 0px 0px $white,
-        inset 1px 0px 0px 0px $black-1;
+        inset 1px 0px 0px 0px $fg-low-priority;
       border-radius: 0;
     }
   }
 
   &:focus-within {
     border-radius: 4px;
-    box-shadow: inset 0px 0px 0px 1px $white, inset 0px 0px 0px 3px $accent-blue;
+    box-shadow: inset 0px 0px 0px 1px $white, inset 0px 0px 0px 3px $primary-accent;
     .SimpleWIcon {
       box-shadow: none;
     }
@@ -240,7 +265,7 @@ body {
   font-weight: $UI-11-wgt-normal;
   line-height: $xsmall;
   letter-spacing: $UI-11-ls;
-  color: $black;
+  color: $fg-high-priority;
   background-color: transparent;
   border: 0;
   -webkit-box-shadow: 0;
@@ -248,16 +273,16 @@ body {
   box-shadow: none;
 
   &::placeholder {
-    color: $black;
+    color: $fg-high-priority;
   }
   &:hover {
     border-radius: 3px;
-    box-shadow: inset 0px 0px 0px 1px $white, inset 0px 0px 0px 2px $black-1;
+    box-shadow: inset 0px 0px 0px 1px $white, inset 0px 0px 0px 2px $fg-low-priority;
   }
   &:focus {
     outline: none;
     border-radius: 4px;
-    box-shadow: inset 0px 0px 0px 1px $white, inset 0px 0px 0px 3px $accent-blue;
+    box-shadow: inset 0px 0px 0px 1px $white, inset 0px 0px 0px 3px $primary-accent;
   }
 }
 
@@ -285,29 +310,29 @@ body {
   font-weight: $UI-11-wgt-normal;
   line-height: $xsmall;
   letter-spacing: $UI-11-ls;
-  color: $black;
+  color: $fg-high-priority;
   background-color: transparent;
   cursor: default;
   .Icon32 {
     path {
-      fill: $black-8;
+      fill: $fg-normal;
     }
   }
   .Icon8 {
     position: relative;
     margin-left: 6px;
     path {
-      fill: $black-3;
+      fill: $fg-normal;
     }
   }
   &:hover {
     border-radius: 3px;
-    box-shadow: inset 0px 0px 0px 1px $white, inset 0px 0px 0px 2px $black-1;
+    box-shadow: inset 0px 0px 0px 1px $white, inset 0px 0px 0px 2px $fg-low-priority;
     .Icon8 {
       position: absolute;
       right: $base-8;
       path {
-        fill: $black-8;
+        fill: $fg-normal;
       }
     }
   }
@@ -328,6 +353,7 @@ body {
   line-height: $UI-12-lh;
   letter-spacing: $UI-12-ls;
   background: $hud;
+  filter: $hud-shadow;
   border-radius: 2px;
   transition: all 0.1s;
   opacity: 0;
@@ -348,7 +374,7 @@ body {
   color: $white;
 
   &:hover {
-    background-color: $accent-blue;
+    background-color: $primary-accent;
   }
   &.selected {
     color: $white;

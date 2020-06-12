@@ -60,3 +60,13 @@ const OptionMenu = props => {
 }
 
 export default OptionMenu
+
+// see notes:
+// you are trying to set a selected state on an individual option item
+// currently it changes to selected state on all items when clicked
+// what you want:
+
+// when option item is clicked do these things:
+//    • Change option's class to "selected"
+//    • Add Icon32 component to Option to <span>
+//    • Set <span> text in .trigger <div> to selected option
