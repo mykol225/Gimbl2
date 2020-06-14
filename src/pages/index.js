@@ -1,6 +1,7 @@
 import React from 'react'
 import 'typeface-inter'
 import '../components/styles.scss'
+import ICONS from '../components/ICONS' //passing this info down into SimpleIcon then Icon component to render the right icon path.
 import Label from '../components/label'
 import SimpleWIcon from '../components/SimpleWIcon'
 import ValueMultiple from '../components/ValueMultiple'
@@ -11,7 +12,8 @@ import DisclosureSection from '../components/DisclosureSection'
 import ValueSimple from '../components/ValueSimple'
 import Combobox from '../components/Combobox'
 import Dropdown from '../components/Dropdown'
-import ICONS from '../components/ICONS' //passing this info down into SimpleIcon then Icon component to render the right icon path.
+import Hyperlink from '../components/Hyperlink'
+import Button from '../components/Button'
 
 const items = [
   {
@@ -42,12 +44,14 @@ const IndexPage = () => (
     <SectionTitle titleName="Section Title" />
     <DisclosureSection name="Disclosure Section" icon={ICONS.CARETRIGHT16} />
     <Label labelName="Lable name" />
+    <Hyperlink title="Go to Master Component" link="google.com" target="_blank" />
     <Disclosure name="Disclosure" icon={ICONS.CARETRIGHT16} />
     <ValueSimple value="" placeholder="placeholder" />
     <SimpleWIcon icon={ICONS.ANGLE} cursor="IconEwCursor" value="" placeholder="empty" />{' '}
     <ValueMultiple icon={ICONS.CORNERRADIUS} value="" placeholder="0" />
     <Combobox />
     <Dropdown titleName={items[0].value} items={items} icon={ICONS.BLENDEMPTY} />
+    <Button title="Show Prototype Settings" />
   </div>
 )
 
