@@ -4,7 +4,7 @@ import Icon8 from './Icon8'
 import ICONS from '../components/ICONS'
 
 const OptionMenu = props => {
-  const selectedIcon = ICONS.MENUitemSelectedMARKON
+  const selectedIcon = ICONS.MENUCHECKMARKON
   const arrow = ICONS.CHEVRONDOWN8
   const list = props.list
   const selectedItem = null
@@ -36,6 +36,7 @@ const OptionMenu = props => {
         className={isSelected ? optionSelected : optionNotSelected}
         datavalue={element}
         onClick={selected}
+        selected={false}
       >
         <Icon32 icon={isSelected ? selectedIcon : ''} />
         {element}
@@ -60,13 +61,3 @@ const OptionMenu = props => {
 }
 
 export default OptionMenu
-
-// see notes:
-// you are trying to set a selected state on an individual option item
-// currently it changes to selected state on all items when clicked
-// what you want:
-
-// when option item is clicked do these things:
-//    • Change option's class to "selected"
-//    • Add Icon32 component to Option to <span>
-//    • Set <span> text in .trigger <div> to selected option

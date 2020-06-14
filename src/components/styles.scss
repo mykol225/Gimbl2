@@ -72,6 +72,15 @@ $hud-shadow: drop-shadow(0px 5px 17px rgba(0, 0, 0, 0.2))
   drop-shadow(0px 2px 7px rgba(0, 0, 0, 0.15));
 
 /******** MAIN CSS *******/
+
+button,
+[type='button'] {
+  border: none;
+  text-decoration: none;
+  -webkit-appearance: none;
+  background-color: transparent;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -286,41 +295,21 @@ body {
   }
 }
 
-.OptionMenu-wrapper {
-  position: relative;
+.dd-wrapper {
+  width: 100%;
   user-select: none;
-  width: 100%;
 }
 
-.OptionMenu {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-}
-
-.OptionMenu-trigger {
-  position: relative;
-  display: flex;
-  align-items: center;
-  padding: $base-8 $tiny $base-8 0;
-  height: $xsmall;
-  width: 100%;
+.dd-header {
   font-size: $UI-11-size;
   font-style: $UI-11-style;
   font-weight: $UI-11-wgt-normal;
   line-height: $xsmall;
   letter-spacing: $UI-11-ls;
-  color: $fg-high-priority;
-  background-color: transparent;
-  cursor: default;
-  .Icon32 {
-    path {
-      fill: $fg-normal;
-    }
-  }
+
   .Icon8 {
     position: relative;
-    margin-left: 6px;
+    padding-left: 6px;
     path {
       fill: $fg-normal;
     }
@@ -328,60 +317,95 @@ body {
   &:hover {
     border-radius: 3px;
     box-shadow: inset 0px 0px 0px 1px $white, inset 0px 0px 0px 2px $fg-low-priority;
-    .Icon8 {
+    .dd-header_arrow-icon {
       position: absolute;
-      right: $base-8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 28px;
+      right: 1px;
+    }
+    .Icon8 {
+      padding: 0;
       path {
         fill: $fg-normal;
       }
     }
   }
+  &:focus {
+    outline: none;
+    border-radius: 4px;
+    box-shadow: inset 0px 0px 0px 1px $white, inset 0px 0px 0px 3px $primary-accent;
+    .dd-header_arrow-icon {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 28px;
+      right: 1px;
+      border-radius: 0 $tiny $tiny 0;
+      background-color: $primary-accent;
+    }
+    .Icon8 {
+      padding: 0;
+      path {
+        fill: $white;
+      }
+    }
+  }
 }
 
-.OptionMenu-options {
-  position: absolute;
-  display: block;
+.dd-header_title {
+  position: relative;
+  display: flex;
+  align-items: center;
+  .Icon32 {
+    path {
+      fill: $fg-normal;
+    }
+  }
+}
+
+.dd-list {
   padding: 8px 0px;
-  top: 100%;
-  left: 0;
-  right: 0;
-  color: $white;
-  font-family: $UI-12-font;
-  font-style: $UI-12-style;
-  font-weight: $UI-12-wgt-normal;
-  font-size: $UI-12-size;
-  line-height: $UI-12-lh;
-  letter-spacing: $UI-12-ls;
-  background: $hud;
+  background-color: $hud;
   filter: $hud-shadow;
   border-radius: 2px;
   transition: all 0.1s;
-  opacity: 0;
-  visibility: hidden;
-  z-index: 2;
 }
 
-.OptionMenu-option {
-  position: relative;
-  display: flex;
+.dd-list-item {
   padding-left: 0;
-  height: $medium;
-  font-family: $UI-12-font;
-  font-style: $UI-12-style;
-  font-weight: 300;
-  line-height: 32px;
-  letter-spacing: $UI-12-ls;
-  color: $white;
+  .Icon32 {
+    path {
+      fill: $white;
+    }
+  }
+  &button,
+  [type='button'] {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    color: $white;
+    font-family: $UI-12-font;
+    font-style: $UI-12-style;
+    font-weight: 300;
+    font-size: $UI-12-size;
+    line-height: 32px;
+    letter-spacing: $UI-12-ls;
 
+    &:focus {
+      outline: none;
+    }
+  }
   &:hover {
     background-color: $primary-accent;
   }
-  &.selected {
-    color: $white;
-    padding-left: 0;
-    path {
-      fill: $white-8;
-      align-self: center;
-    }
+  &:focus {
+    outline: none;
+    border-radius: 4px;
+    box-shadow: inset 0px 0px 0px 1px $white, inset 0px 0px 0px 3px $primary-accent;
   }
 }
