@@ -35,6 +35,12 @@ function Dropdown({ icon, titleName, items, multiSelect = false }) {
     }
   }
 
+  function isIcon(icon) {
+    if (icon) {
+      return <Icon32 icon={icon} />
+    }
+  }
+
   return (
     <div className="dd-wrapper">
       <div
@@ -45,8 +51,8 @@ function Dropdown({ icon, titleName, items, multiSelect = false }) {
         onClick={() => toggle(!open)}
       >
         <div className="dd-header_title">
-          <Icon32 icon={icon} />
-          {title}
+          {isIcon(icon)}
+          <p>{title}</p>
           <div className="dd-header_arrow-icon">
             <Icon8 icon={arrow} />
           </div>

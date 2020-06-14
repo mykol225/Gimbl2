@@ -309,7 +309,6 @@ body {
 
   .Icon8 {
     position: relative;
-    padding-left: 6px;
     path {
       fill: $fg-normal;
     }
@@ -361,7 +360,12 @@ body {
   position: relative;
   display: flex;
   align-items: center;
+  height: $medium;
+  p {
+    padding: $base-8 $tiny $base-8 $base-8;
+  }
   .Icon32 {
+    margin-right: -$base-8;
     path {
       fill: $fg-normal;
     }
