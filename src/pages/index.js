@@ -14,6 +14,8 @@ import Combobox from '../components/Combobox'
 import Dropdown from '../components/Dropdown'
 import Hyperlink from '../components/Hyperlink'
 import Button from '../components/Button'
+import IconButton from '../components/IconButton'
+import OptionButton from '../components/OptionButton'
 
 const items = [
   {
@@ -52,6 +54,8 @@ const IndexPage = () => (
     <Combobox />
     <Dropdown titleName={items[0].value} items={items} icon={ICONS.BLENDEMPTY} />
     <Button title="Show Prototype Settings" />
+    <IconButton icon={ICONS.STYLES} cursor="pointer" />
+    <OptionButton icon={ICONS.LINKBROKEN} cursor="pointer" on />
   </div>
 )
 

@@ -449,6 +449,7 @@ body {
   line-height: $UI-11-lh;
   letter-spacing: $UI-11-ls;
   text-align: center;
+  user-select: none;
 
   &.standard {
     color: $fg-normal;
@@ -489,6 +490,74 @@ body {
         outline: 0px !important;
         -webkit-appearance: none;
         box-shadow: inset 0px 0px 0px 2px $fg-low-priority;
+      }
+    }
+  }
+}
+
+.IconButton-container {
+  width: $medium;
+  height: $medium;
+  border-radius: 2px;
+
+  .Icon32 {
+    path {
+      fill: $fg-normal;
+    }
+  }
+  &:hover {
+    background-color: $black-1;
+  }
+  &:focus {
+    outline: 0px !important;
+    -webkit-appearance: none;
+    box-shadow: inset 0px 0px 0px 2px $primary-accent;
+  }
+  &:active {
+    background-color: $primary-accent;
+    path {
+      fill: $white;
+    }
+    &:focus {
+      box-shadow: inset 0px 0px 0px 2px $black-1;
+    }
+  }
+}
+
+.OptionButton-container {
+  width: $medium;
+  height: $medium;
+  border-radius: 2px;
+
+  .Icon32 {
+    path {
+      fill: $fg-normal;
+    }
+  }
+  &:hover {
+    box-shadow: inset 0px 0px 0px 1px $black-1;
+  }
+  &:focus {
+    outline: 0px !important;
+    -webkit-appearance: none;
+    box-shadow: inset 0px 0px 0px 2px $primary-accent;
+  }
+  &:active {
+    box-shadow: inset 0px 0px 0px 2px $primary-accent;
+    &:focus {
+      box-shadow: inset 0px 0px 0px 2px $black-1;
+    }
+  }
+  &.on {
+    box-shadow: inset 0px 0px 0px 2px $white;
+    background-color: $black-1;
+    &:hover {
+      box-shadow: inset 0px 0px 0px 1px $black-1, inset 0px 0px 0px 2px $white;
+    }
+    &:active {
+      box-shadow: inset 0px 0px 0px 2px $primary-accent;
+      &:focus {
+        box-shadow: inset 0px 0px 0px 2px $black-1;
       }
     }
   }
