@@ -22,7 +22,7 @@ $success: #1bc47d;
 $warning: #f24822;
 $error: #ffeb00;
 
-$black-1: #0000001a;
+$black-1: #dddddd;
 
 /******** SPACING ********/
 $tiny: 4px;
@@ -201,7 +201,7 @@ body {
 .SimpleWIcon {
   display: flex;
   path {
-    fill: $fg-normal;
+    fill: $fg-low-priority;
   }
 
   .Icon32 {
@@ -495,7 +495,7 @@ body {
   }
 }
 
-.IconButton-container {
+.IconButton {
   width: $medium;
   height: $medium;
   border-radius: 2px;
@@ -507,24 +507,31 @@ body {
   }
   &:hover {
     background-color: $black-1;
+    border-radius: 4px;
+    box-shadow: inset 0px 0px 0px 2px $white;
   }
-  &:focus {
+  &:focus,
+  :active {
     outline: 0px !important;
     -webkit-appearance: none;
-    box-shadow: inset 0px 0px 0px 2px $primary-accent;
+    // box-shadow: inset 0px 0px 0px 2px $primary-accent;
   }
-  &:active {
+  &.on {
+    border-radius: 4px;
     background-color: $primary-accent;
-    path {
-      fill: $white;
+    box-shadow: inset 0px 0px 0px 2px $white;
+    .Icon32 {
+      path {
+        fill: $white;
+      }
     }
-    &:focus {
-      box-shadow: inset 0px 0px 0px 2px $black-1;
-    }
+    // &:focus {
+    //   box-shadow: inset 0px 0px 0px 2px #00000033, inset 0px 0px 0px 2px $primary-accent;
+    // }
   }
 }
 
-.OptionButton-container {
+.OptionButton {
   width: $medium;
   height: $medium;
   border-radius: 2px;
@@ -540,13 +547,13 @@ body {
   &:focus {
     outline: 0px !important;
     -webkit-appearance: none;
-    box-shadow: inset 0px 0px 0px 2px $primary-accent;
+    // box-shadow: inset 0px 0px 0px 2px $primary-accent;
   }
   &:active {
     box-shadow: inset 0px 0px 0px 2px $primary-accent;
-    &:focus {
-      box-shadow: inset 0px 0px 0px 2px $black-1;
-    }
+    // &:focus {
+    //   box-shadow: inset 0px 0px 0px 2px $black-1;
+    // }
   }
   &.on {
     box-shadow: inset 0px 0px 0px 2px $white;
@@ -556,9 +563,45 @@ body {
     }
     &:active {
       box-shadow: inset 0px 0px 0px 2px $primary-accent;
-      &:focus {
-        box-shadow: inset 0px 0px 0px 2px $black-1;
-      }
+      // &:focus {
+      //   box-shadow: inset 0px 0px 0px 2px $black-1;
+      // }
     }
+  }
+}
+
+.OptionStrip-container {
+  padding: 1px;
+  width: min-content;
+  &:focus {
+    outline: solid 0px;
+    -webkit-appearance: none;
+    box-shadow: none;
+  }
+}
+
+.OptionStrip_hover {
+  display: flex;
+  border-radius: 2px;
+  &:hover {
+    box-shadow: inset 0px 0px 0px 1px $black-1;
+  }
+}
+
+.OptionStrip_option {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 4px;
+  width: $small;
+  height: $small;
+  &:focus {
+    outline: solid 0px;
+    -webkit-appearance: none;
+    box-shadow: none;
+  }
+  &.on {
+    border-radius: 2px;
+    background-color: $black-1;
   }
 }

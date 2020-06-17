@@ -16,8 +16,9 @@ import Hyperlink from '../components/Hyperlink'
 import Button from '../components/Button'
 import IconButton from '../components/IconButton'
 import OptionButton from '../components/OptionButton'
+import OptionStrip from '../components/OptionStrip'
 
-const items = [
+const DropDownItems = [
   {
     id: 1,
     value: 'Pass through',
@@ -40,6 +41,27 @@ const items = [
   },
 ]
 
+const OptionButtonOptions = [
+  {
+    id: 1,
+    name: 'Left align',
+    icon: ICONS.TEXTALIGNLEFT16,
+    initialStateOn: true,
+  },
+  {
+    id: 2,
+    name: 'Center align',
+    icon: ICONS.TEXTALIGNCENTER16,
+    initialStateOn: false,
+  },
+  {
+    id: 3,
+    name: 'Right align',
+    icon: ICONS.TEXTALIGNRIGHT16,
+    initialStateOn: false,
+  },
+]
+
 const IndexPage = () => (
   <div>
     <LargeSectionTitle titleName="Large Section Title" />
@@ -52,10 +74,11 @@ const IndexPage = () => (
     <SimpleWIcon icon={ICONS.ANGLE} cursor="IconEwCursor" value="" placeholder="empty" />{' '}
     <ValueMultiple icon={ICONS.CORNERRADIUS} value="" placeholder="0" />
     <Combobox />
-    <Dropdown titleName={items[0].value} items={items} icon={ICONS.BLENDEMPTY} />
+    <Dropdown titleName={DropDownItems[0].value} items={DropDownItems} icon={ICONS.BLENDEMPTY} />
     <Button title="Show Prototype Settings" />
     <IconButton icon={ICONS.STYLES} cursor="pointer" />
-    <OptionButton icon={ICONS.LINKBROKEN} cursor="pointer" on />
+    <OptionButton icon={ICONS.LINKBROKEN} cursor="pointer" />
+    <OptionStrip name="text alignment" options={OptionButtonOptions} />
   </div>
 )
 
