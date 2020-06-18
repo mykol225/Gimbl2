@@ -14,7 +14,7 @@ const Button = props => {
             : 'Button primary destructive '
         }
       >
-        {props.title}
+        {props.children}
       </button>
     </div>
   )

@@ -17,6 +17,7 @@ import Button from '../components/Button'
 import IconButton from '../components/IconButton'
 import OptionButton from '../components/OptionButton'
 import OptionStrip from '../components/OptionStrip'
+import CheckBox from '../components/CheckBox'
 
 const DropDownItems = [
   {
@@ -64,21 +65,24 @@ const OptionButtonOptions = [
 
 const IndexPage = () => (
   <div>
-    <LargeSectionTitle titleName="Large Section Title" />
-    <SectionTitle titleName="Section Title" />
-    <DisclosureSection name="Disclosure Section" icon={ICONS.CARETRIGHT16} />
-    <Label labelName="Lable name" />
-    <Hyperlink title="Go to Master Component" link="google.com" target="_blank" />
-    <Disclosure name="Disclosure" icon={ICONS.CARETRIGHT16} />
+    <LargeSectionTitle>Large Section Title</LargeSectionTitle>
+    <SectionTitle>Section Title</SectionTitle>
+    <DisclosureSection icon={ICONS.CARETRIGHT16}>Disclosure Section</DisclosureSection>
+    <Label>Label name</Label>
+    <Hyperlink link="google.com" target="_blank">
+      Go to Master Component
+    </Hyperlink>
+    <Disclosure icon={ICONS.CARETRIGHT16}>Disclosure</Disclosure>
     <ValueSimple value="" placeholder="placeholder" />
     <SimpleWIcon icon={ICONS.ANGLE} cursor="IconEwCursor" value="" placeholder="empty" />{' '}
     <ValueMultiple icon={ICONS.CORNERRADIUS} value="" placeholder="0" />
     <Combobox />
     <Dropdown titleName={DropDownItems[0].value} items={DropDownItems} icon={ICONS.BLENDEMPTY} />
-    <Button title="Show Prototype Settings" />
+    <Button>Show Prototype Settings</Button>
     <IconButton icon={ICONS.STYLES} cursor="pointer" />
     <OptionButton icon={ICONS.LINKBROKEN} cursor="pointer" />
     <OptionStrip name="text alignment" options={OptionButtonOptions} />
+    <CheckBox id="clipContent">Clip content</CheckBox>
   </div>
 )
 

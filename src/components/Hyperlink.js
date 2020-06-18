@@ -4,7 +4,7 @@ const Hyperlink = props => {
   return (
     <div className="link-container">
       <a href={props.link} className="Link-input" target={props.target}>
-        {props.title}
+        {props.children}
       </a>
     </div>
   )

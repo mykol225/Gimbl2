@@ -5,14 +5,14 @@ const DisclosureSection = props => {
   if (!props.icon || props.icon === 'none') {
     return (
       <div className="Disclosure-container">
-        <p className="DisclosureSection-p">{props.name}</p>
+        <p className="DisclosureSection-p">{props.children}</p>
       </div>
     )
   } else {
     return (
       <div className="Disclosure-container">
         <Icon16 icon={props.icon} />
-        <p className="DisclosureSection-p">{props.name}</p>
+        <p className="DisclosureSection-p">{props.children}</p>
       </div>
     )
   }
