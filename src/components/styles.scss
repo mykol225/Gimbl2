@@ -154,7 +154,7 @@ body {
   height: $medium;
 }
 
-.Label-input {
+.Label-content {
   padding: $base-8;
   width: 100%;
   font-size: $UI-11-size;
@@ -592,7 +592,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 4px;
+  margin: 2px;
   width: $small;
   height: $small;
   &:focus {
@@ -603,5 +603,18 @@ body {
   &.on {
     border-radius: 2px;
     background-color: $black-1;
+  }
+}
+
+.Check-box {
+  display: flex;
+  align-items: center;
+  input {
+    margin-left: $base-8;
+  }
+  &:focus {
+    outline: solid 0px;
+    -webkit-appearance: none;
+    box-shadow: none;
   }
 }

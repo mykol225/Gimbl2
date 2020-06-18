@@ -3,7 +3,6 @@ import Icon16 from '../components/Icon16'
 
 const OptionStrip = ({ name, options }) => {
   const [isSelected, setSelected] = useState(options[0].id)
-  const toggle = () => setIsOn(!isOn)
 
   console.log(options[isSelected - 1].name)
 

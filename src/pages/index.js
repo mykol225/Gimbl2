@@ -82,7 +82,14 @@ const IndexPage = () => (
     <IconButton icon={ICONS.STYLES} cursor="pointer" />
     <OptionButton icon={ICONS.LINKBROKEN} cursor="pointer" />
     <OptionStrip name="text alignment" options={OptionButtonOptions} />
-    <CheckBox id="clipContent">Clip content</CheckBox>
+    <CheckBox
+      id="clipContent"
+      title="Clip content"
+      description="this is a description"
+      checked="checked"
+    >
+      Clip content
+    </CheckBox>
   </div>
 )
 
