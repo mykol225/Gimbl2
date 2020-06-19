@@ -1,6 +1,5 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Label from '../components/label'
-import { useState } from 'react'
 
 const CheckBox = props => {
   const [isChecked, setInput] = useState(props.checked)

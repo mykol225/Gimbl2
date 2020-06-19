@@ -18,6 +18,7 @@ import IconButton from '../components/IconButton'
 import OptionButton from '../components/OptionButton'
 import OptionStrip from '../components/OptionStrip'
 import CheckBox from '../components/CheckBox'
+import Switch from '../components/Switch'
 
 const DropDownItems = [
   {
@@ -90,6 +91,9 @@ const IndexPage = () => (
     >
       Clip content
     </CheckBox>
+    <Switch checked="" id="switch" title="Switch">
+      Switch
+    </Switch>
   </div>
 )
 

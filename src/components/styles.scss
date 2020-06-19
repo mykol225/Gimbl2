@@ -563,9 +563,6 @@ body {
     }
     &:active {
       box-shadow: inset 0px 0px 0px 2px $primary-accent;
-      // &:focus {
-      //   box-shadow: inset 0px 0px 0px 2px $black-1;
-      // }
     }
   }
 }
@@ -616,5 +613,56 @@ body {
     outline: solid 0px;
     -webkit-appearance: none;
     box-shadow: none;
+  }
+  .Label-content {
+    user-select: none;
+  }
+}
+
+.Switch-container {
+  display: flex;
+  align-items: center;
+  input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  .switch {
+    display: flex;
+    align-items: center;
+    padding-left: $base-8;
+    padding-right: $base-8;
+    .slider-container {
+      display: block;
+      position: relative;
+      width: 24px;
+      height: 12px;
+      background-color: $white;
+      border-radius: 8px;
+      box-shadow: inset 0px 0px 0px 1px $fg-high-priority;
+      transition: background-color 0.1s ease-in 0s;
+    }
+    .inner-slider {
+      display: block;
+      position: absolute;
+      left: 0;
+      margin: 1px;
+      width: 10px;
+      height: 10px;
+      background-color: $white;
+      border-radius: 8px;
+      box-shadow: 0px 0px 0px 1px $fg-high-priority;
+      transition: all 0.1s ease-in 0s;
+    }
+  }
+  input:checked + .switch .slider-container {
+    background-color: $fg-high-priority;
+  }
+  input:checked + .switch .inner-slider {
+    position: absolute;
+    left: 12px;
+  }
+  .Label-content {
+    user-select: none;
   }
 }
