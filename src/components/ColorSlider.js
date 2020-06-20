@@ -1,4 +1,5 @@
 import React, { useRef, useEffect } from 'react'
+import Styles from '../components/ColorSlider.module.scss'
 
 const ColorSlider = props => {
   const canvasRef = useRef()
@@ -40,10 +41,10 @@ const ColorSlider = props => {
   }, [])
 
   return (
-    <div className="CS-container">
+    <div className={Styles.container}>
       <canvas ref={canvasRef} width="168px" height="12px"></canvas>
       <input type="range" min="1" max="100" id="myRange" />
-      <div className="innerShadow"></div>
+      <div className={Styles.innerShadow}></div>
     </div>
   )
 }

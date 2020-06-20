@@ -1,5 +1,11 @@
-trying to figure out how to use props to dynamically bring an SVG into the <IconLabel /> component.
+06.20.2020
 
-Context: you are using a Gatsby plugin that makes all SVGs in the /assets folder into usable components. Then you are importing those into iconLabel... but how do you do it with props?
+CSS:
+Refactoring the css to separate out global variables and styles into localized modules
+Then @use (actually @import) those modules into their coorisponding component
+Currently reading about the 7-1 sass pattern here: https://sass-guidelin.es/#the-7-1-pattern
 
-Problem: The app will display 100 or more icons an any given time. How do I make a single component that will display the correct SVG and it's styles? I assume I'd want to have a single Icon component that takes in props for which svg to display and in what color.
+JS Modules:
+Also looking into how to create an es6 module to reuse whenever I need a checkered pattern or gradient made. (like in ColorSlider and Swatch)
+
+Also trying to figure out how to make a git branch before I refactor all the css

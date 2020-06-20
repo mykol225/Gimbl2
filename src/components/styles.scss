@@ -620,99 +620,10 @@ body {
   }
 }
 
-.Switch-container {
-  display: flex;
-  align-items: center;
-  input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-  }
-  .switch {
-    display: flex;
-    align-items: center;
-    padding-left: $base-8;
-    padding-right: $base-8;
-    .slider-container {
-      display: block;
-      position: relative;
-      width: 24px;
-      height: 12px;
-      background-color: $white;
-      border-radius: 8px;
-      box-shadow: inset 0px 0px 0px 1px $fg-high-priority;
-      transition: background-color 0.1s ease-in 0s;
-    }
-    .inner-slider {
-      display: block;
-      position: absolute;
-      left: 0;
-      margin: 1px;
-      width: 10px;
-      height: 10px;
-      background-color: $white;
-      border-radius: 8px;
-      box-shadow: 0px 0px 0px 1px $fg-high-priority;
-      transition: all 0.1s ease-in 0s;
-    }
-  }
-  input:checked + .switch .slider-container {
-    background-color: $fg-high-priority;
-  }
-  input:checked + .switch .inner-slider {
-    position: absolute;
-    left: 12px;
-  }
-  .Label-content {
-    user-select: none;
-  }
-}
-
-.CS-container {
-  display: flex;
-  position: relative;
-  width: 168px;
-  height: 12px;
-  margin-top: $xsmall;
-  margin-bottom: $xsmall;
-  &:focus {
-    appearance: none;
-    outline: solid 0px;
-    box-shadow: none;
-  }
-  input {
-    appearance: none;
-    background-color: transparent;
-    z-index: 1;
-    width: 100%;
-    height: 100%;
-    &::-webkit-slider-thumb {
-      appearance: none;
-      background: transparent;
-      width: 12px;
-      height: 12px;
-      border-radius: 12px;
-      box-shadow: inset 0px 0px 0px 2px white, 0px 0px 0px 1px $fg-low-priority;
-    }
-    &:focus {
-      appearance: none;
-      outline: solid 0px;
-      box-shadow: none;
-    }
-  }
+.Swatch {
+  width: 16px;
+  height: 16px;
   canvas {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 12px;
-    z-index: 0;
-  }
-  .innerShadow {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border-radius: 12px;
-    box-shadow: inset 0px 0px 0px 0.5px $fg-low-priority;
+    border-radius: 2px;
   }
 }

@@ -1,0 +1,78 @@
+/******** NOTES ********/
+// import this with '@import "_global" not @use '/components/_global' as global;
+// @use is not currently supported in node-sass. Only dart-sass.
+
+/******** COLOR ********/
+//Background color styles
+$white: #ffffff;
+$white-8: #ffffffcc;
+$white-4: #ffffff66;
+$hud: #222;
+$toolbar: #2c2c2c;
+
+//Foreground color styles
+$fg-high-priority: #000;
+$fg-normal: #000000cc;
+$fg-low-priority: #0000004d;
+$flip-fg-high-priority: #ffffff;
+$flip-fg-normal: #ffffffcc;
+$flip-fg-low-priority: #ffffff66;
+
+//Accent & indicator color styles
+$primary-accent: #18a0fb;
+$secondary-accent: #7b61ff;
+$tertiary-accent: #ff00ff;
+$success: #1bc47d;
+$warning: #f24822;
+$error: #ffeb00;
+
+$black-1: #dddddd;
+
+/******** SPACING ********/
+$tiny: 4px;
+$base-8: 8px;
+$xsmall: 16px;
+$small: 24px;
+$medium: 32px;
+$large: 40px;
+$xlarge: 48px;
+$xxlarge: 64px;
+$huge: 80px;
+
+/******** FONTS ********/
+// Family
+$font-stack: 'Inter', Helvetica, sans-serif;
+
+// 11 pt
+$UI-11-font: $font-stack;
+$UI-11-style: normal;
+$UI-11-wgt-normal: 400;
+$UI-11-wgt-medium: 500;
+$UI-11-wgt-bold: 600;
+$UI-11-size: 11px;
+$UI-11-lh: 16px;
+$UI-11-ls: 0.005em;
+
+// 12 pt
+$UI-12-font: $font-stack;
+$UI-12-style: normal;
+$UI-12-wgt-normal: 400;
+$UI-12-wgt-medium: 500;
+$UI-12-wgt-bold: 600;
+$UI-12-size: 12px;
+$UI-12-lh: 24px;
+$UI-12-ls: -0.006em;
+
+// 14 pt
+$UI-14-font: $font-stack;
+$UI-14-style: normal;
+$UI-14-wgt-normal: 400;
+$UI-14-wgt-medium: 500;
+$UI-14-wgt-bold: 600;
+$UI-14-size: 14px;
+$UI-14-lh: 24px;
+$UI-14-ls: -0.006em;
+
+/******** EFFECTS ********/
+$hud-shadow: drop-shadow(0px 5px 17px rgba(0, 0, 0, 0.2))
+  drop-shadow(0px 2px 7px rgba(0, 0, 0, 0.15));

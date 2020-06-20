@@ -20,6 +20,7 @@ import OptionStrip from '../components/OptionStrip'
 import CheckBox from '../components/CheckBox'
 import Switch from '../components/Switch'
 import ColorSlider from '../components/ColorSlider'
+import ColorSwatch from '../components/ColorSwatch'
 
 const DropDownItems = [
   {
@@ -97,6 +98,7 @@ const IndexPage = () => (
     </Switch>
     <ColorSlider type="hue" />
     <ColorSlider type="opactiy" />
+    <ColorSwatch />
   </div>
 )
 
