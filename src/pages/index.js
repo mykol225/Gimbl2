@@ -19,6 +19,7 @@ import OptionButton from '../components/OptionButton'
 import OptionStrip from '../components/OptionStrip'
 import CheckBox from '../components/CheckBox'
 import Switch from '../components/Switch'
+import ColorSlider from '../components/ColorSlider'
 
 const DropDownItems = [
   {
@@ -87,13 +88,15 @@ const IndexPage = () => (
       id="clipContent"
       title="Clip content"
       description="this is a description"
-      checked="checked"
+      checked={false}
     >
       Clip content
     </CheckBox>
     <Switch checked="" id="switch" title="Switch">
       Switch
     </Switch>
+    <ColorSlider type="hue" />
+    <ColorSlider type="opactiy" />
   </div>
 )
 
