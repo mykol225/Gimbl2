@@ -1,3 +1,3 @@
 # Gimbl2
 
-Another attempt at making the UI for the interactive 3D Design app Gimbl. Now with a bit more learnings.
+This is a faithful recreation of Figma's editor UI using react. In an attempt to learn react and not focus on visual design.
