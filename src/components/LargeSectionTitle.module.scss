@@ -1,0 +1,15 @@
+@import '_global';
+
+.LargeSectionTitleContainer {
+  height: $medium + $base-8;
+}
+
+.LargeSectionTitleText {
+  padding: $base-8;
+  width: 100%;
+  font-size: $UI-14-size;
+  line-height: $UI-14-lh;
+  letter-spacing: $UI-14-ls;
+  font-weight: $UI-14-wgt-normal;
+  color: $fg-high-priority;
+}

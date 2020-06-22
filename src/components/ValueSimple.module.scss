@@ -1,0 +1,36 @@
+@import '_global';
+
+.ValueSimple {
+  cursor: default;
+  padding: $base-8 $tiny $base-8 $base-8;
+  height: $xsmall;
+  width: 100%;
+  font-size: $UI-11-size;
+  font-style: $UI-11-style;
+  font-weight: $UI-11-wgt-normal;
+  line-height: $xsmall;
+  letter-spacing: $UI-11-ls;
+  color: $fg-high-priority;
+  background-color: transparent;
+  border: 0;
+  -webkit-box-shadow: 0;
+  -moz-box-shadow: 0;
+  box-shadow: none;
+  &:placeholder-shown {
+    border-radius: 0px;
+    box-shadow: inset 0px -2px 0px 0px $white, inset 8px 0px 0px 0px $white,
+      inset -8px 0px 0px 0px $white, inset 0px -3px 0px 0px $black-1;
+  }
+  &::placeholder {
+    color: $fg-normal;
+  }
+  &:hover {
+    border-radius: 3px;
+    box-shadow: inset 0px 0px 0px 1px $white, inset 0px 0px 0px 2px $black-1;
+  }
+  &:focus {
+    outline: none;
+    border-radius: 4px;
+    box-shadow: inset 0px 0px 0px 1px $white, inset 0px 0px 0px 3px $primary-accent;
+  }
+}

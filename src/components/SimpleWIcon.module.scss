@@ -1,0 +1,59 @@
+@import '_global';
+
+.SimpleWIcon {
+  display: flex;
+  path {
+    fill: $fg-low-priority;
+  }
+
+  .Icon32 {
+    min-width: $medium;
+    margin-right: -$base-8;
+    &:hover,
+    &:focus {
+      cursor: ew-resize;
+    }
+  }
+
+  &:hover {
+    border-radius: 3px;
+    box-shadow: inset 0px 0px 0px 1px $white, inset 0px 0px 0px 2px $black-1;
+    // &.ValueSimple {
+    //   &:hover,
+    //   &:placeholder-shown {
+    //     box-shadow: none;
+    //     background-color: lightcyan;
+    //   }
+    // }
+  }
+
+  &:focus-within {
+    outline: none;
+    border-radius: 4px;
+    box-shadow: inset 0px 0px 0px 1px $white, inset 0px 0px 0px 3px $primary-accent;
+    // &.ValueSimple:focus {
+    //   box-shadow: none;
+    //   background-color: red;
+    // }
+  }
+}
+
+// .ValueSimple {
+//   background-color: red;
+// }
+
+.Valuetest {
+  background-color: red;
+}
+
+// .SimpleWIcon > .ValueSimple:placeholder-shown {
+//   // &:hover,
+//   // &:placeholder-shown {
+//   // box-shadow: none;
+//   background-color: lightcyan;
+//   // }
+// }
+
+// you're stuck
+
+// can't figure out how to select ValueSimple as a child for focus or hover

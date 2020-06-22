@@ -1,0 +1,17 @@
+@import '_global';
+
+.CheckBox {
+  display: flex;
+  align-items: center;
+  input {
+    margin-left: $base-8;
+  }
+  &:focus {
+    outline: solid 0px;
+    -webkit-appearance: none;
+    box-shadow: none;
+  }
+  .LabelContent {
+    user-select: none;
+  }
+}

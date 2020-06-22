@@ -1,0 +1,15 @@
+@import '_global';
+
+.SectionTitleContainer {
+  height: $medium;
+}
+
+.SectionTitleText {
+  padding: $base-8;
+  width: 100%;
+  font-size: $UI-11-size;
+  line-height: $UI-11-lh;
+  letter-spacing: $UI-11-ls;
+  font-weight: $UI-11-wgt-bold;
+  color: $fg-high-priority;
+}

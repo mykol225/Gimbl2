@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Styles from './ValueSimple.module.scss'
 
 const ValueSimple = props => {
   const [value, setValue] = useState(props.value)
@@ -7,13 +8,14 @@ const ValueSimple = props => {
     setValue(event.target.value)
   }
   return (
-    <div className="ValueSimple-container">
+    <div>
       <input
         type="text"
-        className="ValueSimple"
+        className={Styles.ValueSimple}
         placeholder={props.placeholder}
         value={value}
         onChange={handleNameChange}
+        title="ValueSimple"
       />
     </div>
   )

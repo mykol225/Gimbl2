@@ -1,9 +1,10 @@
 import React from 'react'
+import Styles from '../components/Label.module.scss'
 
 const Label = props => {
   return (
-    <div className="Label-container">
-      <label className="Label-content" htmlFor={props.htmlFor}>
+    <div className={Styles.LabelContainer}>
+      <label className={Styles.LabelContent} htmlFor={props.htmlFor}>
         {props.children}
       </label>
     </div>

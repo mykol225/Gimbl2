@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Label from '../components/label'
+import Styles from '../components/CheckBox.module.scss'
 
 const CheckBox = props => {
   const [isChecked, setInput] = useState(props.checked)
@@ -8,7 +9,7 @@ const CheckBox = props => {
 
   console.log(isChecked ? 'Checkbox checked' : 'Checkbox not checked')
   return (
-    <div className="Check-box" title={props.title}>
+    <div className={Styles.CheckBox} title={props.title}>
       <input type="checkbox" checked={isChecked} id={props.id} onChange={handleInputChange} />
       <Label htmlFor={props.id}>{props.children}</Label>
     </div>

@@ -96,144 +96,144 @@ body {
   cursor: default;
 }
 
-.LargeSectionTitle-container {
-  height: $medium + $base-8;
-}
+// .LargeSectionTitle-container {
+//   height: $medium + $base-8;
+// }
 
-.LargeSectionTitle-text {
-  padding: $base-8;
-  width: 100%;
-  font-size: $UI-14-size;
-  line-height: $UI-14-lh;
-  letter-spacing: $UI-14-ls;
-  font-weight: $UI-14-wgt-normal;
-  color: $fg-high-priority;
-}
+// .LargeSectionTitle-text {
+//   padding: $base-8;
+//   width: 100%;
+//   font-size: $UI-14-size;
+//   line-height: $UI-14-lh;
+//   letter-spacing: $UI-14-ls;
+//   font-weight: $UI-14-wgt-normal;
+//   color: $fg-high-priority;
+// }
 
-.SectionTitle-container {
-  height: $medium;
-}
+// .SectionTitle-container {
+//   height: $medium;
+// }
 
-.SectionTitle-text {
-  padding: $base-8;
-  width: 100%;
-  font-size: $UI-11-size;
-  line-height: $UI-11-lh;
-  letter-spacing: $UI-11-ls;
-  font-weight: $UI-11-wgt-bold;
-  color: $fg-high-priority;
-}
+// .SectionTitle-text {
+//   padding: $base-8;
+//   width: 100%;
+//   font-size: $UI-11-size;
+//   line-height: $UI-11-lh;
+//   letter-spacing: $UI-11-ls;
+//   font-weight: $UI-11-wgt-bold;
+//   color: $fg-high-priority;
+// }
 
-.Disclosure-container {
-  display: flex;
-  align-items: center;
-  height: $medium;
-}
+// .Disclosure-container {
+//   display: flex;
+//   align-items: center;
+//   height: $medium;
+// }
 
-.Disclosure-p {
-  padding: $base-8;
-  width: 100%;
-  font-size: $UI-11-size;
-  line-height: $UI-11-lh;
-  letter-spacing: $UI-11-ls;
-  color: $fg-high-priority;
-}
+// .Disclosure-p {
+//   padding: $base-8;
+//   width: 100%;
+//   font-size: $UI-11-size;
+//   line-height: $UI-11-lh;
+//   letter-spacing: $UI-11-ls;
+//   color: $fg-high-priority;
+// }
 
-.DisclosureSection-p {
-  padding: $base-8;
-  width: 100%;
-  font-size: $UI-11-size;
-  line-height: $UI-11-lh;
-  letter-spacing: $UI-11-ls;
-  font-weight: $UI-11-wgt-bold;
-  color: $fg-high-priority;
-}
+// .DisclosureSection-p {
+//   padding: $base-8;
+//   width: 100%;
+//   font-size: $UI-11-size;
+//   line-height: $UI-11-lh;
+//   letter-spacing: $UI-11-ls;
+//   font-weight: $UI-11-wgt-bold;
+//   color: $fg-high-priority;
+// }
 
-.Label-container {
-  display: flex;
-  align-items: center;
-  height: $medium;
-}
+// .LabelContainer {
+//   display: flex;
+//   align-items: center;
+//   height: $medium;
+// }
 
-.Label-content {
-  padding: $base-8;
-  width: 100%;
-  font-size: $UI-11-size;
-  line-height: $UI-11-lh;
-  letter-spacing: $UI-11-ls;
-  color: $fg-high-priority;
-}
+// .LabelContent {
+//   padding: $base-8;
+//   width: 100%;
+//   font-size: $UI-11-size;
+//   line-height: $UI-11-lh;
+//   letter-spacing: $UI-11-ls;
+//   color: $fg-high-priority;
+// }
 
-.ValueSimple {
-  cursor: default;
-  padding: $base-8 $tiny $base-8 $base-8;
-  height: $xsmall;
-  width: 100%;
-  font-size: $UI-11-size;
-  font-style: $UI-11-style;
-  font-weight: $UI-11-wgt-normal;
-  line-height: $xsmall;
-  letter-spacing: $UI-11-ls;
-  color: $fg-high-priority;
-  background-color: transparent;
-  border: 0;
-  -webkit-box-shadow: 0;
-  -moz-box-shadow: 0;
-  box-shadow: none;
-  &:placeholder-shown {
-    border-radius: 0px;
-    box-shadow: inset 0px -2px 0px 0px $white, inset 8px 0px 0px 0px $white,
-      inset -8px 0px 0px 0px $white, inset 0px -3px 0px 0px $black-1;
-  }
-  &::placeholder {
-    color: $fg-normal;
-  }
-  &:hover {
-    border-radius: 3px;
-    box-shadow: inset 0px 0px 0px 1px $white, inset 0px 0px 0px 2px $black-1;
-  }
-  &:focus {
-    outline: none;
-    border-radius: 4px;
-    box-shadow: inset 0px 0px 0px 1px $white, inset 0px 0px 0px 3px $primary-accent;
-  }
-}
+// .ValueSimple {
+//   cursor: default;
+//   padding: $base-8 $tiny $base-8 $base-8;
+//   height: $xsmall;
+//   width: 100%;
+//   font-size: $UI-11-size;
+//   font-style: $UI-11-style;
+//   font-weight: $UI-11-wgt-normal;
+//   line-height: $xsmall;
+//   letter-spacing: $UI-11-ls;
+//   color: $fg-high-priority;
+//   background-color: transparent;
+//   border: 0;
+//   -webkit-box-shadow: 0;
+//   -moz-box-shadow: 0;
+//   box-shadow: none;
+//   &:placeholder-shown {
+//     border-radius: 0px;
+//     box-shadow: inset 0px -2px 0px 0px $white, inset 8px 0px 0px 0px $white,
+//       inset -8px 0px 0px 0px $white, inset 0px -3px 0px 0px $black-1;
+//   }
+//   &::placeholder {
+//     color: $fg-normal;
+//   }
+//   &:hover {
+//     border-radius: 3px;
+//     box-shadow: inset 0px 0px 0px 1px $white, inset 0px 0px 0px 2px $black-1;
+//   }
+//   &:focus {
+//     outline: none;
+//     border-radius: 4px;
+//     box-shadow: inset 0px 0px 0px 1px $white, inset 0px 0px 0px 3px $primary-accent;
+//   }
+// }
 
-.SimpleWIcon {
-  display: flex;
-  path {
-    fill: $fg-low-priority;
-  }
+// .SimpleWIcon {
+//   display: flex;
+//   path {
+//     fill: $fg-low-priority;
+//   }
 
-  .Icon32 {
-    min-width: $medium;
-    margin-right: -$base-8;
-    &:hover,
-    &:focus {
-      cursor: ew-resize;
-    }
-  }
+//   .Icon32 {
+//     min-width: $medium;
+//     margin-right: -$base-8;
+//     &:hover,
+//     &:focus {
+//       cursor: ew-resize;
+//     }
+//   }
 
-  &:hover {
-    border-radius: 3px;
-    box-shadow: inset 0px 0px 0px 1px $white, inset 0px 0px 0px 2px $black-1;
-    .ValueSimple {
-      &:hover,
-      &:placeholder-shown {
-        box-shadow: none;
-      }
-    }
-  }
+//   &:hover {
+//     border-radius: 3px;
+//     box-shadow: inset 0px 0px 0px 1px $white, inset 0px 0px 0px 2px $black-1;
+//     .ValueSimple {
+//       &:hover,
+//       &:placeholder-shown {
+//         box-shadow: none;
+//       }
+//     }
+//   }
 
-  &:focus-within {
-    outline: none;
-    border-radius: 4px;
-    box-shadow: inset 0px 0px 0px 1px $white, inset 0px 0px 0px 3px $primary-accent;
-    .ValueSimple:focus {
-      box-shadow: none;
-    }
-  }
-}
+//   &:focus-within {
+//     outline: none;
+//     border-radius: 4px;
+//     box-shadow: inset 0px 0px 0px 1px $white, inset 0px 0px 0px 3px $primary-accent;
+//     .ValueSimple:focus {
+//       box-shadow: none;
+//     }
+//   }
+// }
 
 .ValueMultiple {
   display: flex;
@@ -601,29 +601,5 @@ body {
   &.on {
     border-radius: 2px;
     background-color: $black-1;
-  }
-}
-
-.Check-box {
-  display: flex;
-  align-items: center;
-  input {
-    margin-left: $base-8;
-  }
-  &:focus {
-    outline: solid 0px;
-    -webkit-appearance: none;
-    box-shadow: none;
-  }
-  .Label-content {
-    user-select: none;
-  }
-}
-
-.Swatch {
-  width: 16px;
-  height: 16px;
-  canvas {
-    border-radius: 2px;
   }
 }

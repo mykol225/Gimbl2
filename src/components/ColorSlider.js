@@ -26,7 +26,6 @@ const ColorSlider = props => {
       const h = 3
       for (let i = 0; i < rows; i++) {
         for (let j = 0; j < columns; j++) {
-          console.log(i % 2 ? 'even' : 'odd')
           canvas.fillRect(i % 2 ? j * 6 + 3 : j * 6, i * h, w, h)
           // for every iteration x=j * two widths(6px)
           // if the row(i) is even shift x over by 3px

@@ -1,18 +1,19 @@
 import React from 'react'
-import Icon16 from '../components/Icon16'
+import Icon16 from './Icon16'
+import Styles from './DisclosureSection.module.scss'
 
 const DisclosureSection = props => {
   if (!props.icon || props.icon === 'none') {
     return (
-      <div className="Disclosure-container">
-        <p className="DisclosureSection-p">{props.children}</p>
+      <div className={Styles.DisclosureContainer}>
+        <p className={Styles.DisclosureSectionP}>{props.children}</p>
       </div>
     )
   } else {
     return (
-      <div className="Disclosure-container">
+      <div className={Styles.DisclosureContainer}>
         <Icon16 icon={props.icon} />
-        <p className="DisclosureSection-p">{props.children}</p>
+        <p className={Styles.DisclosureSectionP}>{props.children}</p>
       </div>
     )
   }

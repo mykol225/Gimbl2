@@ -1,0 +1,17 @@
+@import '_global';
+
+.LabelContainer {
+  display: flex;
+  align-items: center;
+  height: $medium;
+  background-color: li;
+}
+
+.LabelContent {
+  padding: $base-8;
+  width: 100%;
+  font-size: $UI-11-size;
+  line-height: $UI-11-lh;
+  letter-spacing: $UI-11-ls;
+  color: $fg-high-priority;
+}

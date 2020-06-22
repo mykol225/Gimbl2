@@ -1,0 +1,9 @@
+@import '_global';
+
+.Swatch {
+  width: 16px;
+  height: 16px;
+  canvas {
+    border-radius: 2px;
+  }
+}
