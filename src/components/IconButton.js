@@ -9,8 +9,6 @@ const IconButton = props => {
 
   IconButton.handleClickOutside = () => setIsOn(false)
 
-  console.log(isOn ? 'IconButton on' : 'IconButton off')
-
   return (
     <div>
       <button className={isOn ? 'IconButton on' : 'IconButton'} onClick={toggle} title="IconButton">

@@ -716,3 +716,15 @@ body {
     box-shadow: inset 0px 0px 0px 0.5px $fg-low-priority;
   }
 }
+
+.ColorSwatch {
+  margin-bottom: 8px;
+  width: 16px;
+  height: 16px;
+  border-radius: 2px;
+  background-color: #fff;
+  canvas {
+    border-radius: 2px;
+  }
+  box-shadow: 0px 0px 0px 1px $white;
+}

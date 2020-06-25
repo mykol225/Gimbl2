@@ -5,8 +5,6 @@ const OptionButton = props => {
   const [isOn, setIsOn] = useState(false)
   const toggle = () => setIsOn(!isOn)
 
-  console.log(isOn ? 'Option on' : 'Option off')
-
   return (
     <div
       className={isOn ? 'OptionButton on' : 'OptionButton'}

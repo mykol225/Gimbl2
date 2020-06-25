@@ -6,7 +6,6 @@ const Switch = props => {
 
   const handleInputChange = e => setIsOn(!isOn)
 
-  console.log(isOn ? 'Switched On' : 'Switched Off')
   return (
     <div className="Switch-container">
       <input type="checkbox" checked={isOn} id={props.id} onChange={handleInputChange}></input>

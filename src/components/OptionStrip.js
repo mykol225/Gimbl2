@@ -4,8 +4,6 @@ import Icon16 from '../components/Icon16'
 const OptionStrip = ({ name, options }) => {
   const [isSelected, setSelected] = useState(options[0].id)
 
-  console.log(options[isSelected - 1].name)
-
   return (
     <div className="OptionStrip-container" title={name}>
       <div className="OptionStrip_hover">

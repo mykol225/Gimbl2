@@ -6,7 +6,6 @@ const CheckBox = props => {
 
   const handleInputChange = e => setInput(!isChecked)
 
-  console.log(isChecked ? 'Checkbox checked' : 'Checkbox not checked')
   return (
     <div className="Check-box" title={props.title}>
       <input type="checkbox" checked={isChecked} id={props.id} onChange={handleInputChange} />
