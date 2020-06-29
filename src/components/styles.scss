@@ -718,7 +718,7 @@ body {
 }
 
 .ColorSwatch {
-  margin-bottom: 8px;
+  margin: $base-8;
   width: 16px;
   height: 16px;
   border-radius: 2px;
@@ -727,4 +727,50 @@ body {
     border-radius: 2px;
   }
   box-shadow: 0px 0px 0px 1px $white;
+}
+
+.ColorWValue {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  &:hover {
+    border-radius: 3px;
+    box-shadow: inset 0px 0px 0px 1px $white, inset 0px 0px 0px 2px $black-1;
+    .ValueSimple,
+    .ColorSwatch {
+      &:hover,
+      &:placeholder-shown {
+        box-shadow: none;
+      }
+    }
+    .ValueSimple-container:nth-of-type(3) {
+      box-shadow: inset 0px 1px 0px 0px $white, inset 0px -1px 0px 0px $white,
+        inset 1px 0px 0px 0px $black-1;
+      border-radius: 0;
+    }
+  }
+  &:focus-within {
+    outline: none;
+    border-radius: 4px;
+    box-shadow: inset 0px 0px 0px 1px $white, inset 0px 0px 0px 3px $primary-accent;
+    .ValueSimple:focus {
+      box-shadow: none;
+    }
+  }
+  .ValueSimple-container:nth-of-type(2) {
+    width: auto;
+    margin-left: -$base-8;
+    .ValueSimple {
+      width: 56px;
+      padding-right: $base-8;
+    }
+  }
+  .ValueSimple-container:nth-of-type(3) {
+    width: auto;
+    .ValueSimple {
+      width: 32px;
+      padding-right: $base-8;
+    }
+  }
 }
