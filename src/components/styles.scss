@@ -757,6 +757,9 @@ body {
     .ValueSimple:focus {
       box-shadow: none;
     }
+    .ValueSimple-container:nth-of-type(3) {
+      box-shadow: none;
+    }
   }
   .ValueSimple-container:nth-of-type(2) {
     width: auto;

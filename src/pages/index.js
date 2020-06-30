@@ -103,9 +103,9 @@ const IndexPage = () => (
     <ColorWValue
       type="solid"
       color="rgba(255, 200, 35, 0.6)"
-      firstValue="ooooooooo"
+      firstValue="#FACB25"
       firstPlaceholder="empty"
-      secondValue="00000"
+      secondValue="100%"
       secondPlaceholder="100%"
     />
   </div>
