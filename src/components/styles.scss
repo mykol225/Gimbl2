@@ -779,42 +779,6 @@ body {
   }
 }
 
-// .Panel {
-//   width: 240px;
-//   padding-top: $base-8;
-//   padding-bottom: $base-8;
-//   background-color: white;
-//   border-bottom: solid 1px $black-1;
-// }
-
-.SingleRow {
-  display: grid;
-  grid-template-columns: repeat(28, 8px);
-  grid-template-rows: 32px;
-  padding-left: $base-8;
-  padding-right: $base-8;
-  align-items: center;
-  .SimpleWIcon:nth-child(1) {
-    grid-column-start: 1;
-    grid-column-end: span 11;
-    background-color: green;
-  }
-  .SimpleWIcon:nth-child(2) {
-    grid-column-start: 13;
-    grid-column-end: span 11;
-    background-color: red;
-  }
-  .OptionButton:nth-child(3) {
-    grid-column-start: 25;
-    grid-column-end: span 4;
-    background-color: yellow;
-  }
-}
-
-.Transform {
-  margin: 0;
-}
-
 .SideBar {
   margin: $small;
 }
