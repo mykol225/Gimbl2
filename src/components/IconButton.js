@@ -10,7 +10,7 @@ const IconButton = props => {
   IconButton.handleClickOutside = () => setIsOn(false)
 
   return (
-    <div>
+    <div className="IconButton-container">
       <button className={isOn ? 'IconButton on' : 'IconButton'} onClick={toggle} title="IconButton">
         <Icon32 icon={props.icon} cursor={props.cursor} />
       </button>
