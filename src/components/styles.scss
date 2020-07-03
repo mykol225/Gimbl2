@@ -111,19 +111,14 @@ body {
   color: $fg-high-priority;
 }
 
-.SectionTitle-container {
-  height: $medium;
-}
-
-.SectionTitle-text {
-  padding: $base-8;
-  width: 100%;
-  font-size: $UI-11-size;
-  line-height: $UI-11-lh;
-  letter-spacing: $UI-11-ls;
-  font-weight: $UI-11-wgt-bold;
-  color: $fg-high-priority;
-}
+// .SectionTitle-text {
+//   padding: $base-8;
+//   font-size: $UI-11-size;
+//   line-height: $UI-11-lh;
+//   letter-spacing: $UI-11-ls;
+//   font-weight: $UI-11-wgt-bold;
+//   color: $fg-high-priority;
+// }
 
 .Disclosure-container {
   display: flex;
@@ -508,7 +503,7 @@ body {
     }
   }
   &:hover {
-    background-color: $black-1;
+    background-color: #0000000f;
     border-radius: 4px;
     box-shadow: inset 0px 0px 0px 2px $white;
   }

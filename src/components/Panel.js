@@ -1,11 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Color } from '../modules/designTokens'
+import { Color, Spacing } from '../modules/designTokens'
 
 const PanelStyle = styled.div`
   width: 240px;
-  padding-top: 8px;
-  padding-bottom: 8px;
+  padding-top: ${Spacing.base};
+  padding-bottom: ${Spacing.base};
   background-color: white;
   border-bottom: solid 1px ${Color.black1};
 `

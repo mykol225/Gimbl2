@@ -1,12 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Spacing } from '../modules/designTokens'
 
 const SingleRowStyle = styled.div`
   display: grid;
-  grid-template-columns: repeat(28, 8px);
-  grid-template-rows: 32px;
-  padding-left: 8px;
-  padding-right: 8px;
+  grid-template-columns: repeat(28, ${Spacing.base});
+  grid-template-rows: ${Spacing.medium};
+  padding-left: ${Spacing.base};
+  padding-right: ${Spacing.base};
   align-items: center;
 `
 
