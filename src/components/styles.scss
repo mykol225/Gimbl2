@@ -97,6 +97,12 @@ body {
   background-color: #eee;
 }
 
+.libraryBody {
+  margin: 16pt;
+  padding: 8pt;
+  background-color: white;
+}
+
 .LargeSectionTitle-container {
   height: $medium + $base-8;
 }
@@ -110,15 +116,6 @@ body {
   font-weight: $UI-14-wgt-normal;
   color: $fg-high-priority;
 }
-
-// .SectionTitle-text {
-//   padding: $base-8;
-//   font-size: $UI-11-size;
-//   line-height: $UI-11-lh;
-//   letter-spacing: $UI-11-ls;
-//   font-weight: $UI-11-wgt-bold;
-//   color: $fg-high-priority;
-// }
 
 .Disclosure-container {
   display: flex;
@@ -294,125 +291,6 @@ body {
   }
 }
 
-.dd-wrapper {
-  width: 100%;
-  user-select: none;
-}
-
-.dd-header {
-  font-size: $UI-11-size;
-  font-style: $UI-11-style;
-  font-weight: $UI-11-wgt-normal;
-  line-height: $xsmall;
-  letter-spacing: $UI-11-ls;
-
-  .Icon8 {
-    position: relative;
-    path {
-      fill: $fg-normal;
-    }
-  }
-  &:hover {
-    border-radius: 3px;
-    box-shadow: inset 0px 0px 0px 1px $white, inset 0px 0px 0px 2px $black-1;
-    .dd-header_arrow-icon {
-      position: absolute;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 24px;
-      height: 28px;
-      right: 1px;
-    }
-    .Icon8 {
-      padding: 0;
-      path {
-        fill: $fg-normal;
-      }
-    }
-  }
-  &:focus {
-    outline: none;
-    border-radius: 4px;
-    box-shadow: inset 0px 0px 0px 1px $white, inset 0px 0px 0px 3px $primary-accent;
-    .dd-header_arrow-icon {
-      position: absolute;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 24px;
-      height: 28px;
-      right: 1px;
-      border-radius: 0 $tiny $tiny 0;
-      background-color: $primary-accent;
-    }
-    .Icon8 {
-      padding: 0;
-      path {
-        fill: $white;
-      }
-    }
-  }
-}
-
-.dd-header_title {
-  position: relative;
-  display: flex;
-  align-items: center;
-  height: $medium;
-  p {
-    padding: $base-8 $tiny $base-8 $base-8;
-  }
-  .Icon32 {
-    margin-right: -$base-8;
-    path {
-      fill: $fg-normal;
-    }
-  }
-}
-
-.dd-list {
-  padding: 8px 0px;
-  background-color: $hud;
-  filter: $hud-shadow;
-  border-radius: 2px;
-  transition: all 0.1s;
-}
-
-.dd-list-item {
-  padding-left: 0;
-  .Icon32 {
-    path {
-      fill: $white;
-    }
-  }
-  &button,
-  [type='button'] {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    color: $white;
-    font-family: $UI-12-font;
-    font-style: $UI-12-style;
-    font-weight: 300;
-    font-size: $UI-12-size;
-    line-height: 32px;
-    letter-spacing: $UI-12-ls;
-
-    &:focus {
-      outline: none;
-    }
-  }
-  &:hover {
-    background-color: $primary-accent;
-  }
-  &:focus {
-    outline: none;
-    border-radius: 4px;
-    box-shadow: inset 0px 0px 0px 1px $white, inset 0px 0px 0px 3px $primary-accent;
-  }
-}
-
 .Link-container {
   display: flex;
   align-items: center;
@@ -496,6 +374,8 @@ body {
   width: $medium;
   height: $medium;
   border-radius: 2px;
+  margin-top: 8px;
+  margin-bottom: 8px;
 
   .Icon32 {
     path {

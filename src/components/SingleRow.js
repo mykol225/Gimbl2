@@ -4,11 +4,11 @@ import { Spacing } from '../modules/designTokens'
 
 const SingleRowStyle = styled.div`
   display: grid;
+  align-items: center;
   grid-template-columns: repeat(28, ${Spacing.base});
   grid-template-rows: ${Spacing.medium};
   padding-left: ${Spacing.base};
   padding-right: ${Spacing.base};
-  align-items: center;
 `
 
 const SingleRow = props => {

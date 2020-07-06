@@ -14,11 +14,7 @@ const SectionTitleStyled = styled.p`
 `
 
 const SectionTitle = props => {
-  return (
-    <div>
-      <SectionTitleStyled>{props.children}</SectionTitleStyled>
-    </div>
-  )
+  return <SectionTitleStyled>{props.children}</SectionTitleStyled>
 }
 
 export default SectionTitle

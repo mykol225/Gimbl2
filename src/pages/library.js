@@ -22,6 +22,7 @@ import Switch from '../components/Switch'
 import ColorSlider from '../components/ColorSlider'
 import ColorSwatch from '../components/ColorSwatch'
 import ColorWValue from '../components/ColorWValue'
+import ValueSimpleNew from '../components/ValueSimpleNew'
 
 const DropDownItems = [
   {
@@ -68,7 +69,7 @@ const OptionButtonOptions = [
 ]
 
 const Library = () => (
-  <div>
+  <div className="libraryBody">
     <LargeSectionTitle>Large Section Title</LargeSectionTitle>
     <SectionTitle>Section Title</SectionTitle>
     <DisclosureSection icon={ICONS.CARETRIGHT16}>Disclosure Section</DisclosureSection>
@@ -78,6 +79,7 @@ const Library = () => (
     </Hyperlink>
     <Disclosure icon={ICONS.CARETRIGHT16}>Disclosure</Disclosure>
     <ValueSimple value="" placeholder="placeholder" />
+    <ValueSimpleNew value="" placeholder="placeholder" />
     <SimpleWIcon icon={ICONS.ANGLE} cursor="IconEwCursor" value="" placeholder="empty" />{' '}
     <ValueMultiple icon={ICONS.CORNERRADIUS} value="" placeholder="0" />
     <Combobox />

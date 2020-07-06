@@ -32,7 +32,19 @@ const Font = {
     },
     size: '11px',
     lineHeight: '16px',
-    lineSpacing: '0.005em',
+    letterSpacing: '0.005em',
+  },
+  ui12: {
+    family: "'Inter',${Color.white} Helvetica, sans-serif",
+    style: 'normal',
+    weight: {
+      normal: 'normal',
+      medium: 'medium',
+      bold: 'bold',
+    },
+    size: '12px',
+    lineHeight: '24px',
+    letterSpacing: '0.006em',
   },
 }
 
@@ -48,4 +60,9 @@ const Spacing = {
   huge: '80px',
 }
 
-export { Color, Font, Spacing }
+const Effect = {
+  hudShadow:
+    'drop-shadow(0px 5px 17px rgba(0, 0, 0, 0.2)) drop-shadow(0px 2px 7px rgba(0, 0, 0, 0.15))',
+}
+
+export { Color, Font, Spacing, Effect }
