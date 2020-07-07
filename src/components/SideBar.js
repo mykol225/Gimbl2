@@ -6,9 +6,11 @@ import SideBarHeader from './SideBarHeader'
 import Layer from './Layer'
 import Fill from './Fill'
 import Stroke from './Stroke'
+import Constraints from './Constraints'
 
 const SideBarStyle = styled.div`
-  margin: ${Spacing.xSmall};
+  float: right;
+  margin-top: ${Spacing.large};
 `
 
 const SideBar = props => {
@@ -16,6 +18,7 @@ const SideBar = props => {
     <SideBarStyle>
       <SideBarHeader />
       <Transform />
+      <Constraints />
       <Layer />
       <Fill />
       <Stroke />
