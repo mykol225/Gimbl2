@@ -117,7 +117,7 @@ const ListItem = styled.li`
   }
 `
 
-function Dropdown({ icon, titleName, items, multiSelect = false }) {
+function Dropdown({ icon, titleName, items }) {
   const selectedIcon = ICONS.MENUCHECKMARKON
   const arrow = ICONS.CHEVRONDOWN8
   const [open, setOpen] = useState(false)

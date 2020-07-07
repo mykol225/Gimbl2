@@ -72,7 +72,7 @@ const Layer = props => {
             <ValueSimpleNew value="100%" placeholder="empty" />
           </div>
           <div className="LayerBlendModeButton">
-            <IconButton icon={ICONS.CORNERS} cursor="pointer" />
+            <IconButton icon={ICONS.VISIBLE} cursor="pointer" />
           </div>
         </SingleRow>
       </Panel>

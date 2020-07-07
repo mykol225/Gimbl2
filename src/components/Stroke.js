@@ -6,6 +6,9 @@ import SectionTitle from './SectionTItle'
 import ColorWValue from './ColorWValue'
 import IconButton from './IconButton'
 import ICONS from './ICONS'
+import SimpleWIcon from './SimpleWIcon'
+import Dropdown from './Dropdown'
+import arrayToObjectArray from '../modules/arrayToObjectArray'
 
 const FillTitle = styled.div`
   grid-column-start: 1;
@@ -31,13 +34,29 @@ const RemoveFill = styled.div`
   grid-column-start: 25;
   grid-column-end: span 4;
 `
+const StrokeWeightDropdown = styled.div`
+  grid-column-start: 1;
+  grid-column-end: span 11;
+`
+const StrokeAlignment = styled.div`
+  grid-column-start: 13;
+  grid-column-end: span 12;
+`
+const Menu = styled.div`
+  grid-column-start: 25;
+  grid-column-end: span 4;
+`
 
-const Fill = props => {
+const options = ['Center', 'Inside', 'Outside']
+
+const DropDownItems = arrayToObjectArray(options)
+
+const Stroke = props => {
   return (
     <Panel>
       <SingleRow>
         <FillTitle>
-          <SectionTitle>Fill</SectionTitle>
+          <SectionTitle>Stroke</SectionTitle>
         </FillTitle>
         <StyleButton>
           <IconButton icon={ICONS.STYLES} />
@@ -50,8 +69,8 @@ const Fill = props => {
         <Colors>
           <ColorWValue
             type="solid"
-            color="rgba(255, 200, 35, 0.6)"
-            firstValue="FACB25"
+            color="#000000"
+            firstValue="000000"
             firstPlaceholder=""
             secondValue="100%"
             secondPlaceholder=""
@@ -64,8 +83,19 @@ const Fill = props => {
           <IconButton icon={ICONS.MINUS} />
         </RemoveFill>
       </SingleRow>
+      <SingleRow>
+        <StrokeWeightDropdown>
+          <SimpleWIcon icon={ICONS.STROKEWEIGHT} cursor="IconEwCursor" value="1" placeholder="" />
+        </StrokeWeightDropdown>
+        <StrokeAlignment>
+          <Dropdown titleName={DropDownItems[0].value} items={DropDownItems} icon="" />
+        </StrokeAlignment>
+        <Menu>
+          <IconButton icon={ICONS.MEATBALLS} />
+        </Menu>
+      </SingleRow>
     </Panel>
   )
 }
 
-export default Fill
+export default Stroke
